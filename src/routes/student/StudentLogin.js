@@ -1,14 +1,14 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-const AssistantLogin = () => {
+const StudentLogin = () => {
   return (
     <div>
-        <h2>Asisten</h2>
+        <h2>Siswa</h2>
         <form>
             <input placeholder='Email'/>
             <input placeholder='Sandi'/>
-            <Link to="/assistant/main/home">
+            <Link to="/student/home">
               <button>Login</button>
             </Link>
         </form>
@@ -16,4 +16,4 @@ const AssistantLogin = () => {
   )
 }
 
-export default AssistantLogin
+export default StudentLogin

@@ -10,6 +10,7 @@ const LogInOption = () => {
       <hr></hr>
       <nav>
         <div>
+          <p>Masuk Sebagai</p>
           <Link to="/login/assistant">
             <span>
               Asisten
@@ -18,7 +19,7 @@ const LogInOption = () => {
           <span> </span>
           <Link to="/login/student">
             <span>
-              Murid
+              Siswa
             </span>
           </Link>
         </div>
