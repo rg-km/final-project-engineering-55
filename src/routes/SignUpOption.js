@@ -17,8 +17,8 @@ const SignUpOption = () => {
         <br></br>
         <Link to="/sign-up-option/student">
           <button>
-              Sebagai Murid<br></br>
-              Akun untuk murid, praktikan, parsitipan, member dan lainnya
+              Sebagai Siswa<br></br>
+              Akun untuk siswa, praktikan, parsitipan, member dan lainnya
           </button>
           </Link>
           <p align="right">Sudah punya akun? 

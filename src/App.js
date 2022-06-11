@@ -8,6 +8,9 @@ import AssistantCreateAccount from "./routes/assistant/AssistantCreateAccount";
 import AssistantLogin from './routes/assistant/AssistantLogin';
 import NotFound from './routes/NotFound';
 import StudentLogin from './routes/student/StudentLogin';
+import AssistantMain from './routes/assistant/AssistantMain';
+import AssistantHome from './routes/assistant/AssistantHome';
+import AssistantClasses from './routes/assistant/AssistantClasses';
 
 function App() {
   return (
@@ -23,6 +26,14 @@ function App() {
           <Route index element={<StudentLogin />} />
         </Route>
         <Route path="*" element={<NotFound />} />
+      </Route>
+      <Route path="/assistant/main" element={<AssistantMain />}>
+        <Route path="home">
+          <Route index element={<AssistantHome/>} />
+        </Route>
+        <Route path="classes">
+          <Route index element={<AssistantClasses/>} />
+        </Route>
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
