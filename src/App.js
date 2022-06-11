@@ -7,6 +7,7 @@ import LogInOption from './routes/LogInOption';
 import AssistantCreateAccount from "./routes/assistant/AssistantCreateAccount";
 import AssistantLogin from './routes/assistant/AssistantLogin';
 import NotFound from './routes/NotFound';
+import StudentLogin from './routes/student/StudentLogin';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
       <Route path="/login" element={<LogInOption />}>
         <Route path="assistant">
           <Route index element={<AssistantLogin />} />
+        </Route>
+        <Route path="student">
+          <Route index element={<StudentLogin />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Route>
