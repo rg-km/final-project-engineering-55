@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const LogInOption = () => {
+const AssistantCreateAccount = () => {
   return (
     <div>
       <h1>
@@ -17,12 +17,13 @@ const LogInOption = () => {
         <input type="password" name="sandi" placeholder="Sandi" />
         <label>Konfirmasi Sandi</label>
         <input type="password" name="sandi" placeholder="Konfirmasi Sandi" />
-        <button type="submit">
-          <Link to="/login">Daftar</Link>
-        </button>
+        <Link to="/login">
+          <button type="submit">Daftar
+          </button>
+        </Link>
       </form>
     </div>
   );
 };
 
-export default LogInOption;
+export default AssistantCreateAccount;

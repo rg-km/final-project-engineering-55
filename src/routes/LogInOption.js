@@ -1,10 +1,30 @@
 import React from 'react'
+import { Link, Outlet } from "react-router-dom";
 
 const LogInOption = () => {
   return (
-    <div>
-        <h1>Log In</h1>
-    </div>
+    <>
+      <header>
+        <h1>VLab</h1>
+      </header>
+      <hr></hr>
+      <nav>
+        <div>
+          <Link to="/login/assistant">
+            <span>
+              Asisten
+            </span>
+          </Link>
+          <span> </span>
+          <Link to="/login/student">
+            <span>
+              Murid
+            </span>
+          </Link>
+        </div>
+      </nav>
+      <Outlet />
+    </>
   )
 }
 

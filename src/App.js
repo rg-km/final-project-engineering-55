@@ -4,15 +4,23 @@ import { Routes, Route } from "react-router-dom";
 import Homepage from "./routes/Homepage";
 import SignUpOption from "./routes/SignUpOption";
 import LogInOption from './routes/LogInOption';
-import CreateAccount from "./routes/assistant/CreateAccount";
+import AssistantCreateAccount from "./routes/assistant/AssistantCreateAccount";
+import AssistantLogin from './routes/assistant/AssistantLogin';
+import NotFound from './routes/NotFound';
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Homepage />} />
-      <Route path="/sing-up-option" element={<SignUpOption />} />
-      <Route path="/login" element={<LogInOption />} />
-      <Route path="/create-account" element={<CreateAccount />} />
+      <Route path="/sign-up-option" element={<SignUpOption />} />
+      <Route path="/sign-up-option/assistant" element={<AssistantCreateAccount />} />
+      <Route path="/login" element={<LogInOption />}>
+        <Route path="assistant">
+          <Route index element={<AssistantLogin />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Route>
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

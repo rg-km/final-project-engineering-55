@@ -16,9 +16,9 @@ const Homepage = () => {
               dibagikan oleh siswa dalam bentuk digital kapan saja dan di mana saja.
             </p>
             <div>
-              <Link to="/sing-up-option">
+              <Link to="/sign-up-option">
                 <button>
-                  Sign In
+                  Sign Up
                 </button>
               </Link>
               <Link to="/login">
