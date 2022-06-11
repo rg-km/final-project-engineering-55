@@ -8,22 +8,22 @@ const SignUpOption = () => {
         <hr/>
         Pilih Akun
         <br></br>
+        <Link to="/sign-up-option/assistant">
           <button>
-            <Link to="/create-account">
               Sebagai Asisten<br></br>
               Akun untuk asisten, admin, guru ,dan lainnya
-            </Link>
           </button>
+        </Link>
         <br></br>
+        <Link to="/sign-up-option/student">
           <button>
-            <Link to="/create-account">
               Sebagai Murid<br></br>
               Akun untuk murid, praktikan, parsitipan, member dan lainnya
-            </Link>
           </button>
-          <Link to="/login">
-            <p align="right">Sudah punya akun? Log In</p>
           </Link>
+          <p align="right">Sudah punya akun? 
+            <Link to="/login">Log In</Link>
+          </p>
     </div>
   )
 }
