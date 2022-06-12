@@ -23,7 +23,7 @@ const LogInOption = () => {
                 </Nav.Item>
                 <Nav.Item>
                   <Nav.Link href="##" as={Link} to="/login/student">
-                    Praktikan
+                    Murid
                   </Nav.Link>
                 </Nav.Item>
               </Nav>

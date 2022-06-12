@@ -5,9 +5,16 @@ import { Image, Carousel, Row, Col, Container } from "react-bootstrap";
 const AssistantHome = () => {
   return (
     <Container>
+      <Row>
+        <Col>
+          <br></br>
+          <h1>
+            <center>Selamat Datang</center>
+          </h1>
+        </Col>
+      </Row>
       <Row
         style={{
-          marginTop: "1%",
           marginBottom: "3%",
         }}
       >
@@ -81,16 +88,6 @@ const AssistantHome = () => {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-      </Row>
-      <Row>
-        <Col>
-          <h1>
-            <center>Selamat Datang</center>
-          </h1>
-          <h5>
-            <center>Di VLab</center>
-          </h5>
-        </Col>
       </Row>
     </Container>
   );
