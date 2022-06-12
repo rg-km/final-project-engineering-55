@@ -50,7 +50,7 @@ const AssistantCreateAccount = () => {
               >
                 <Form.Control
                   type="password"
-                  placeholder="Sandi"
+                  placeholder="Password"
                   name="password"
                 />
               </FloatingLabel>
@@ -63,16 +63,14 @@ const AssistantCreateAccount = () => {
               >
                 <Form.Control
                   type="password"
-                  placeholder="Konfirmasi Sandi"
+                  placeholder="Konfirmasi Password"
                   name="confirmPassword"
                 />
               </FloatingLabel>
             </Form.Group>
             <div class="col-md-12 text-center">
               <Link to="/login">
-                <Button variant="primary" type="submit">
-                  Daftar
-                </Button>
+                <Button variant="primary">Daftar</Button>
               </Link>
             </div>
           </Card>

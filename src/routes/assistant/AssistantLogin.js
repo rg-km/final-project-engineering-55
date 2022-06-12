@@ -1,19 +1,35 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Container, Button, Form, FloatingLabel } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const AssistantLogin = () => {
   return (
-    <div>
-        <h2>Asisten</h2>
-        <form>
-            <input placeholder='Email'/>
-            <input placeholder='Sandi'/>
-            <Link to="/assistant/main/home">
-              <button>Login</button>
-            </Link>
-        </form>
-    </div>
-  )
-}
+    <Container className="mt-3">
+      <Form.Group>
+        <FloatingLabel controlId="floatingEmail" label="Email" className="mb-3">
+          <Form.Control type="text" placeholder="Email" name="email" />
+        </FloatingLabel>
+      </Form.Group>
+      <Form.Group>
+        <FloatingLabel
+          controlId="floatingPassword"
+          label="Password"
+          className="mb-3"
+        >
+          <Form.Control
+            type="password"
+            placeholder="Password"
+            nname="password"
+          />
+        </FloatingLabel>
+      </Form.Group>
+      <div class="col-md-12 text-center">
+        <Link to="/assistant/main/home">
+          <Button variant="primary">Login</Button>
+        </Link>
+      </div>
+    </Container>
+  );
+};
 
-export default AssistantLogin
+export default AssistantLogin;
