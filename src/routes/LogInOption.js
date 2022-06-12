@@ -13,7 +13,7 @@ const LogInOption = () => {
       </h5>
       <Row className="justify-content-center">
         <Col xs={10} md={4}>
-          <Card className="mx-4">
+          <Card className="mx-5">
             <Card.Header>
               <Nav fill variant="tabs">
                 <Nav.Item>

@@ -18,8 +18,8 @@ const AssistantCreateAccount = () => {
       </h1>
       <Row className="justify-content-center">
         <Col xs={10} md={4}>
-          <Card className="my-5 px-5 mx-3 py-3">
-            <h4 className="mb-4 text-center">Lengkapi Profil Anda</h4>
+          <Card className="my-5 px-4 mx-5 py-3">
+            <h5 className="mb-4 text-center">Lengkapi Profil Anda</h5>
             <Form.Group>
               <FloatingLabel
                 controlId="floatingInput"
