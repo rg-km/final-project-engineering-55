@@ -17,7 +17,7 @@ const AssistantCreateAccount = () => {
         <center>VLab</center>
       </h1>
       <Row className="justify-content-center">
-        <Col xs={10} md={4}>
+        <Col xl={6} md={4}>
           <Card className="my-5 px-4 mx-5 py-3">
             <h5 className="mb-4 text-center">Lengkapi Profil Anda</h5>
             <Form.Group>
@@ -69,7 +69,7 @@ const AssistantCreateAccount = () => {
               </FloatingLabel>
             </Form.Group>
             <div class="col-md-12 text-center">
-              <Link to="/login">
+              <Link to="/login/assistant">
                 <Button variant="primary">Daftar</Button>
               </Link>
             </div>
