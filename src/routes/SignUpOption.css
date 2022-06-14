@@ -1,0 +1,42 @@
+.option-wrapper {
+    width: 25rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+.option-heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.option-link {
+    color: black;
+    text-decoration: none;
+}
+.option-link:hover{
+    color: black;
+}
+.option-card {
+    width: 25rem;
+    height: 8rem;
+}
+.option-card:hover {
+    border: 2px solid #000000;
+}
+.option-content {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+.option-title {
+    font-size: x-large;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.option-body {
+    margin-top: -10px;
+    margin-bottom: auto;
+}
+.log-in-link {
+    text-decoration: none;
+}

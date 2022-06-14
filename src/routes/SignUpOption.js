@@ -1,29 +1,71 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import { Card, Row, Col } from "react-bootstrap";
+import { FaChalkboardTeacher } from 'react-icons/fa';
+import { VscAccount } from "react-icons/vsc";
+import './SignUpOption.css'
+import BackButton from '../components/BackButton';
 
 const SignUpOption = () => {
   return (
     <div>
-        <h1><center>VLab</center></h1>
+      <header>
+        <h1 className="mt-3">
+          <center>VLab</center>
+        </h1>
+      </header>
         <hr/>
-        Pilih Akun
-        <br></br>
-        <Link to="/sign-up-option/assistant">
-          <button>
-              Sebagai Asisten<br></br>
-              Akun untuk asisten, admin, guru ,dan lainnya
-          </button>
-        </Link>
-        <br></br>
-        <Link to="/sign-up-option/student">
-          <button>
-              Sebagai Siswa<br></br>
-              Akun untuk siswa, praktikan, parsitipan, member dan lainnya
-          </button>
+      <main className='option-wrapper'>
+        <BackButton />
+        <Row>
+          <h2 className='option-heading'>Pilih Akun</h2>
+        </Row>
+        <Row>
+          <Link className='option-link' to="/sign-up-option/assistant">
+            <Card className='option-card rounded-pill'>
+              <Row>
+                <Col sm={3}>
+                  <span className='option-icon'>
+                    <VscAccount size={70} className="mx-3 my-4"/>
+                  </span>
+                </Col>
+                <Col sm={9} className='option-content'>
+                  <p className='option-title'>Sebagai Asisten</p>
+                  <p className='option-body'>
+                    Akun untuk asisten, admin, guru ,dan lainnya
+                  </p>
+                </Col>
+              </Row>
+            </Card>
           </Link>
+        </Row>
+        <br></br>
+        <Row>
+          <Link className='option-link' to="/sign-up-option/student">
+            <Card className='option-card rounded-pill'>
+              <Row>
+                <Col sm={3}>
+                  <span className='option-icon'>
+                    <FaChalkboardTeacher size={70} className="mx-3 my-4"/>
+                  </span>
+                </Col>
+                <Col sm={9} className='option-content'>
+                  <p className='option-title'>Sebagai Siswa</p>
+                  <p className='option-body'>
+                  Akun untuk siswa, praktikan, parsitipan, member dan lainnya
+                  </p>
+                </Col>
+              </Row>
+            </Card>
+          </Link>
+        </Row>
+        <br></br>
+        <Row>
           <p align="right">Sudah punya akun? 
-            <Link to="/login">Log In</Link>
+            <Link to="/login" className='log-in-link'> Log In</Link>
           </p>
+        </Row>
+      </main>
     </div>
   )
 }

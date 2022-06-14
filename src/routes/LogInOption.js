@@ -15,7 +15,7 @@ const LogInOption = () => {
         <Col xs={10} md={4}>
           <Card className="mx-5">
             <Card.Header>
-              <Nav fill variant="tabs">
+              <Nav fill variant="pills">
                 <Nav.Item>
                   <Nav.Link href="#" as={Link} to="/login/assistant">
                     Asisten

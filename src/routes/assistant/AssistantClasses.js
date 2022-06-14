@@ -1,43 +1,51 @@
 import React from 'react'
-import { Button, Card, CardGroup } from 'react-bootstrap';
+import { Container, Card, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './AssistantClasses.css'
 
 const AssistantClasses = () => {
   return (
     <div>
-      <h1>Kelas</h1>
-      <CardGroup>
-        <Link to="/assistant/main/classes/posts" style={{textDecoration: 'none'}}>
-        <Card>
-          <Card style={{ width: '25rem' }}>
-          <Card style={{ height: '10rem' }}>
-            <Card.Body>
-              <Card.Title>Front End</Card.Title>
-              <Card.Text>
-                Web Programming.
-              </Card.Text>
-              <Button variant="primary">Masuk Kelas</Button>
-            </Card.Body>
-        </Card>
-        </Card>
-        </Card>
-        </Link>
-        <Link to="/assistant/main/classes/posts" style={{textDecoration: 'none'}}>
-        <Card>
-          <Card style={{ width: '25rem' }}>
-          <Card style={{ height: '10rem' }}>
-            <Card.Body>
-              <Card.Title>Back End</Card.Title>
-              <Card.Text>
-                Web Programming.
-              </Card.Text>
-              <Button variant="primary">Masuk Kelas</Button>
-            </Card.Body>
-        </Card>
-        </Card>
-        </Card>
-        </Link>
-      </CardGroup>
+      <Container className='assistant-classes-wrapper'>
+        <h1 className='assistant-classes-title'>Kelas</h1>
+      <Row>
+        <Col xs={9} className="assistant-classes-content">
+          <Link to="/assistant/main/classes/posts" style={{textDecoration: 'none'}}>
+            <Card className='assistant-classes-items shadow-sm'>
+              <Card.Body>
+                <Card.Title>Front End</Card.Title>
+                <Card.Text>
+                  Web Programming.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Link>
+          <Link to="/assistant/main/classes/posts" style={{textDecoration: 'none'}}>
+            <Card className='assistant-classes-items shadow-sm'>
+              <Card.Body>
+                <Card.Title>Back End</Card.Title>
+                <Card.Text>
+                  Web Programming.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Link>
+          <Link to="/assistant/main/classes/posts" style={{textDecoration: 'none'}}>
+            <Card className='assistant-classes-items shadow-sm'>
+              <Card.Body>
+                <Card.Title>Dev Ops</Card.Title>
+                <Card.Text>
+                  Web Programming.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Link>
+        </Col>
+        <Col>
+          <Button variant="outline-dark">+ Buat Kelas</Button>
+        </Col>
+      </Row>
+      </Container>
     </div>
   )
 }
