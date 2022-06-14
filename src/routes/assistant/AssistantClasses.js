@@ -1,6 +1,7 @@
 import React from 'react'
-import { Container, Card, Row, Col, Button } from 'react-bootstrap';
+import { Container, Card, Row, Col, Button, ListGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { BiEditAlt } from 'react-icons/bi';
 import './AssistantClasses.css'
 
 const AssistantClasses = () => {
@@ -10,39 +11,60 @@ const AssistantClasses = () => {
         <h1 className='assistant-classes-title'>Kelas</h1>
       <Row>
         <Col xs={9} className="assistant-classes-content">
-          <Link to="/assistant/main/classes/posts" style={{textDecoration: 'none'}}>
-            <Card className='assistant-classes-items shadow-sm'>
-              <Card.Body>
-                <Card.Title>Front End</Card.Title>
-                <Card.Text>
-                  Web Programming.
-                </Card.Text>
-              </Card.Body>
+          <Card className='assistant-classes-items shadow-sm'>
+            <ListGroup variant="flush">
+              <Link to="/assistant/main/classes/posts" style={{textDecoration: 'none'}}>
+                <ListGroup.Item>
+                  <h3>Front End</h3>
+                  <h5>
+                    Web Programming
+                  </h5>
+                  </ListGroup.Item>
+                </Link>
+                <ListGroup.Item >
+                  <Button className='edit-class-button' variant="outline-dark">
+                    <BiEditAlt/> Edit
+                  </Button>
+                </ListGroup.Item>
+              </ListGroup>
             </Card>
-          </Link>
-          <Link to="/assistant/main/classes/posts" style={{textDecoration: 'none'}}>
-            <Card className='assistant-classes-items shadow-sm'>
-              <Card.Body>
-                <Card.Title>Back End</Card.Title>
-                <Card.Text>
-                  Web Programming.
-                </Card.Text>
-              </Card.Body>
+          <Card className='assistant-classes-items shadow-sm'>
+            <ListGroup variant="flush">
+              <Link to="/assistant/main/classes/posts" style={{textDecoration: 'none'}}>
+                <ListGroup.Item>
+                  <h3>Back End</h3>
+                  <h5>
+                    Web Programming
+                  </h5>
+                  </ListGroup.Item>
+                </Link>
+                <ListGroup.Item >
+                  <Button className='edit-class-button' variant="outline-dark">
+                    <BiEditAlt/> Edit
+                  </Button>
+                </ListGroup.Item>
+              </ListGroup>
             </Card>
-          </Link>
-          <Link to="/assistant/main/classes/posts" style={{textDecoration: 'none'}}>
-            <Card className='assistant-classes-items shadow-sm'>
-              <Card.Body>
-                <Card.Title>Dev Ops</Card.Title>
-                <Card.Text>
-                  Web Programming.
-                </Card.Text>
-              </Card.Body>
+          <Card className='assistant-classes-items shadow-sm'>
+            <ListGroup variant="flush">
+              <Link to="/assistant/main/classes/posts" style={{textDecoration: 'none'}}>
+                <ListGroup.Item>
+                  <h3>Dev Ops</h3>
+                  <h5>
+                    Web Programming
+                  </h5>
+                  </ListGroup.Item>
+                </Link>
+                <ListGroup.Item >
+                  <Button className='edit-class-button' variant="outline-dark">
+                    <BiEditAlt/> Edit
+                  </Button>
+                </ListGroup.Item>
+              </ListGroup>
             </Card>
-          </Link>
         </Col>
         <Col>
-          <Button variant="outline-dark">+ Buat Kelas</Button>
+          <Button className='add-class-button' variant="outline-dark">+ Buat Kelas</Button>
         </Col>
       </Row>
       </Container>
