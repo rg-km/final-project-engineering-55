@@ -18,3 +18,9 @@
     box-shadow: 2px;
     border: 2px solid #000000;
 }
+.edit-class-button {
+    float: right;
+}
+.add-class-button {
+    float: right;
+}
