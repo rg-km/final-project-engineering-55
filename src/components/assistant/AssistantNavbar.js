@@ -1,11 +1,12 @@
 import React from "react";
-import { Button, Container, Form, Nav, Navbar } from 'react-bootstrap';
+import { Container, Form, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import AssistantNavIcon from "./AssistantNavIcon";
 
 const AssistantNavbar = () => {
     return (
         <Navbar bg="dark" variant="dark" expand="lg">
-          <Container fluid>
+          <Container xs={4} md={4}>
             <Navbar.Brand>VLab</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
@@ -24,7 +25,7 @@ const AssistantNavbar = () => {
                   className="me-2"
                   aria-label="Search"
                 />
-                <Button variant="outline-success">Search</Button>
+                <AssistantNavIcon />
               </Form>
             </Navbar.Collapse>
           </Container>
