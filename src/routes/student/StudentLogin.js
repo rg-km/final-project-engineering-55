@@ -24,7 +24,7 @@ const StudentLogin = () => {
         </FloatingLabel>
       </Form.Group>
       <div class="col-md-12 text-center">
-        <Link to="/student/home">
+        <Link to="/student/main/home">
           <Button variant="primary">Login</Button>
         </Link>
       </div>

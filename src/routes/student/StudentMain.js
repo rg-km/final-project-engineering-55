@@ -1,12 +1,12 @@
 import React from 'react'
+import StudentNavbar from './components/StudentNavbar'
 import { Outlet } from 'react-router-dom'
-import AssistantClassNavbar from './components/AssistantClassNavbar'
 
-const AssistantClassMain = () => {
+const StudentMain = () => {
   return (
     <div>
       <header>
-        <AssistantClassNavbar />
+        <StudentNavbar />
       </header>
       <main>
         <Outlet />
@@ -15,4 +15,4 @@ const AssistantClassMain = () => {
   )
 }
 
-export default AssistantClassMain
+export default StudentMain
