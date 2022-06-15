@@ -1,4 +1,7 @@
-import { Button, Col, Row, Card } from "react-bootstrap";
+import { Button, Col, Row, Card, ListGroup } from "react-bootstrap";
+import { BiEditAlt } from "react-icons/bi";
+import { MdOutlineQuiz } from "react-icons/md";
+import "./AssistantClassQuiz.css";
 
 const QuizListItems = ({
   id,
@@ -14,30 +17,52 @@ const QuizListItems = ({
   };
 
   return (
-    <Card
-      className="px-3 py-2 "
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        marginBottom: "10px",
-        marginRight: "3px",
-        marginLeft: "3px",
-      }}
-    >
-      <Row className="justify-content-center">
-        <Col xl={13} md={10} className="d-inline p-1 m-1">
-          <h5>{kuisItem.judul}</h5>
-          <div>
-            <p>{kuisItem.deskripsi} </p>
-          </div>
-          <div>Tenggat waktu: {kuisItem.tenggat}</div>
-        </Col>
-        <Col className="d-inline p-1 m-1">
-          <Button variant="primary" onClick={onClickEdit}>
-            Edit
-          </Button>
-        </Col>
-      </Row>
+    <Card className="assistant-class-assignment-items">
+      <ListGroup variant="flush">
+        <ListGroup.Item>
+          <Row>
+            <Col xs="1">
+              <MdOutlineQuiz size={40} className="mx-2" />
+            </Col>
+
+            <Col xs={8} style={{ paddingTop: "10px" }}>
+              <h6>{kuisItem.judul}</h6>
+            </Col>
+            <Col xs={3}>
+              <Button
+                className="edit-class-button"
+                variant="outline-dark"
+                onClick={onClickEdit}
+              >
+                <BiEditAlt /> Edit
+              </Button>
+            </Col>
+          </Row>
+        </ListGroup.Item>
+        <ListGroup.Item>
+          <Row>
+            <Col xs={1}></Col>
+            <Col>
+              <h6
+                style={{
+                  fontSize: "15px",
+                  fontWeight: "normal",
+                }}
+              >
+                {kuisItem.deskripsi}
+              </h6>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={1}></Col>
+            <Col>
+              <p style={{ marginBottom: "2px" }}>
+                Tenggat waktu: <strong>{kuisItem.tenggat}</strong>
+              </p>
+            </Col>
+          </Row>
+        </ListGroup.Item>
+      </ListGroup>
     </Card>
   );
 };
