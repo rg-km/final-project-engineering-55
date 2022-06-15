@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Form, Modal } from "react-bootstrap";
 
-const AssistantAddPostsModal = ({show, handleClose}) => {
+const PostsFormModal = ({show, handleClose}) => {
     const handleFileChange = (e) => {
         e.preventDefault()
       }
@@ -46,4 +46,4 @@ const AssistantAddPostsModal = ({show, handleClose}) => {
     )
 }
 
-export default AssistantAddPostsModal
+export default PostsFormModal

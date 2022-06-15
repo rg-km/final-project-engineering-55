@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Container, Card, Row, Col, Button, ListGroup } from 'react-bootstrap';
 import { BiEditAlt } from 'react-icons/bi';
-import AssistantAddPostsModal from '../../components/assistant/AssistantAddPostsModal';
+import PostsFormModal from './PostsFormModal';
 import { VscAccount } from 'react-icons/vsc';
 import './AssistantClassPosts.css';
 
@@ -56,7 +56,7 @@ const AssistantClassPosts = () => {
               <span className="add-post-caption">Mulai diskusi, unggah materi dan lainnya</span>
               <span className="add-post-icon">+</span>
             </Button>
-            <AssistantAddPostsModal
+            <PostsFormModal
               show={show}
               handleClose={handleClose}
             />
