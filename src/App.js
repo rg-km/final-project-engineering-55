@@ -15,7 +15,7 @@ import StudentCreateAccount from "./routes/student/StudentCreateAccount";
 import AssistantClassMain from "./routes/assistant/AssistantClassMain";
 import AssistantClassPosts from "./routes/assistant/AssistantClassPosts";
 import AssistantClassAssignments from "./routes/assistant/assistant-class-assignment/AssistantClassAssignments";
-import AssistantClassQuiz from "./routes/assistant/AssistantClassQuiz";
+import AssistantClassQuiz from "./routes/assistant/assistant-class-quiz/AssistantClassQuiz";
 import AssistantClassMembers from "./routes/assistant/AssistantClassMembers";
 
 function App() {

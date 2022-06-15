@@ -1,16 +1,16 @@
 import { Button, Col, Row, Card } from "react-bootstrap";
 
-const AssignmentListItems = ({
+const QuizListItems = ({
   id,
-  tugasItem,
+  kuisItem,
   setFormModalType,
   setShowFormModal,
-  setTugasId,
+  setKuisId,
 }) => {
   const onClickEdit = () => {
     setFormModalType("Edit");
     setShowFormModal(true);
-    setTugasId(id);
+    setKuisId(id);
   };
 
   return (
@@ -26,11 +26,11 @@ const AssignmentListItems = ({
     >
       <Row className="justify-content-center">
         <Col xl={13} md={10} className="d-inline p-1 m-1">
-          <h5>{tugasItem.judul}</h5>
+          <h5>{kuisItem.judul}</h5>
           <div>
-            <p>{tugasItem.deskripsi} </p>
+            <p>{kuisItem.deskripsi} </p>
           </div>
-          <div>Tenggat waktu: {tugasItem.tenggat}</div>
+          <div>Tenggat waktu: {kuisItem.tenggat}</div>
         </Col>
         <Col className="d-inline p-1 m-1">
           <Button variant="primary" onClick={onClickEdit}>
@@ -42,4 +42,4 @@ const AssignmentListItems = ({
   );
 };
 
-export default AssignmentListItems;
+export default QuizListItems;
