@@ -1,4 +1,7 @@
-import { Button, Col, Row, Card } from "react-bootstrap";
+import { Button, Col, Row, Card, ListGroup } from "react-bootstrap";
+import { BiEditAlt } from "react-icons/bi";
+import { MdOutlineAssignment } from "react-icons/md";
+import "./AssistantClassAssignment.css";
 
 const AssignmentListItems = ({
   id,
@@ -14,30 +17,52 @@ const AssignmentListItems = ({
   };
 
   return (
-    <Card
-      className="px-3 py-2 "
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        marginBottom: "10px",
-        marginRight: "3px",
-        marginLeft: "3px",
-      }}
-    >
-      <Row className="justify-content-center">
-        <Col xl={13} md={10} className="d-inline p-1 m-1">
-          <h5>{tugasItem.judul}</h5>
-          <div>
-            <p>{tugasItem.deskripsi} </p>
-          </div>
-          <div>Tenggat waktu: {tugasItem.tenggat}</div>
-        </Col>
-        <Col className="d-inline p-1 m-1">
-          <Button variant="primary" onClick={onClickEdit}>
-            Edit
-          </Button>
-        </Col>
-      </Row>
+    <Card className="assistant-class-assignment-items">
+      <ListGroup variant="flush">
+        <ListGroup.Item>
+          <Row>
+            <Col xs="1">
+              <MdOutlineAssignment size={40} className="mx-2" />
+            </Col>
+
+            <Col xs={8} style={{ paddingTop: "10px" }}>
+              <h6>{tugasItem.judul}</h6>
+            </Col>
+            <Col xs={3}>
+              <Button
+                className="edit-class-button"
+                variant="outline-dark"
+                onClick={onClickEdit}
+              >
+                <BiEditAlt /> Edit
+              </Button>
+            </Col>
+          </Row>
+        </ListGroup.Item>
+        <ListGroup.Item>
+          <Row>
+            <Col xs={1}></Col>
+            <Col>
+              <h6
+                style={{
+                  fontSize: "15px",
+                  fontWeight: "normal",
+                }}
+              >
+                {tugasItem.deskripsi}
+              </h6>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={1}></Col>
+            <Col>
+              <p style={{ marginBottom: "2px" }}>
+                Tenggat waktu: <strong>{tugasItem.tenggat}</strong>
+              </p>
+            </Col>
+          </Row>
+        </ListGroup.Item>
+      </ListGroup>
     </Card>
   );
 };
