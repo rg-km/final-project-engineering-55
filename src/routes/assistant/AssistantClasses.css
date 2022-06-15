@@ -18,6 +18,9 @@
     box-shadow: 2px;
     border: 2px solid #000000;
 }
+.assitant-classes-link {
+    background-color: black;
+}
 .edit-class-button {
     float: right;
 }

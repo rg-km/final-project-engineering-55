@@ -1,0 +1,27 @@
+.assistant-class-post-container {
+    margin-top: 50px;
+}
+.assistant-class-post-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.assistant-class-post-title {
+    margin-bottom: 30px;
+    padding: 20px 20px 20px 40px;
+    box-sizing: border-box;
+}
+.assistant-class-post-items {
+    padding: 20px 10px 20px 10px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+.assistant-class-post-edit {
+    float: right;
+}
+.add-post-caption {
+    float: left;
+}
+.add-post-icon{
+    float: right;
+}
