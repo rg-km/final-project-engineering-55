@@ -1,114 +1,96 @@
-import React from 'react'
+import React from "react";
 import { useState } from "react";
-import { Card, Container, Row, Col, Button, Form, Modal } from "react-bootstrap";
-
-const AddMember = (props) => {
-  const { nama, nim } = props;
-  return (
-    <Card
-      className="px-3 py-2 "
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        marginBottom: "10px",
-        marginRight: "3px",
-        marginLeft: "3px",
-      }}
-    >
-      <Row className="justify-content-center">
-        <Col xl={13} md={10} className="d-inline p-1 m-1">
-          <h5>{nama}</h5>
-          <div>
-            <strong>NIM</strong>: {nim}
-          </div>
-        </Col>
-      </Row>
-    </Card>
-  );
-};
+import { Card, Container, Row, Col, Form, ListGroup } from "react-bootstrap";
+import { BsSearch } from "react-icons/bs";
+import { FaChalkboardTeacher } from "react-icons/fa";
+import "./StudentClassMembers.css";
 
 const StudentClassMembers = () => {
-  const [show, setShow] = useState(false);
+  const [name, setName] = useState("");
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const USERS = [
+    { id: 1, nama: "Rizky" },
+    { id: 2, nama: "Dinda" },
+    { id: 3, nama: "Joko" },
+    { id: 4, nama: "Budi" },
+    { id: 5, nama: "Bambang" },
+    { id: 6, nama: "Laksmini" },
+    { id: 7, nama: "Ario" },
+    { id: 8, nama: "Ida" },
+    { id: 9, nama: "Zuhairi" },
+    { id: 10, nama: "Lala" },
+    { id: 11, nama: "Weni" },
+  ];
 
-  const [member, setMember] = useState([
-    {
-      nama: "Anton",
-      nim: "D1234",
-    },
-    {
-      nama: "Budi",
-      nim: "A54628",
-    },
-    {
-      nama: "Joko",
-      nim: "J723527",
-    },
-    {
-      nama: "Rudi",
-      nim: "R823527",
-    },
-  ]);
+  const [member, setMember] = useState(USERS);
+
+  const filter = (event) => {
+    const keyword = event.target.value;
+
+    if (keyword !== "") {
+      const filteredMember = USERS.filter((user) => {
+        return user.nama.toLowerCase().startsWith(keyword.toLowerCase());
+      });
+      setMember(filteredMember);
+    } else {
+      setMember(USERS);
+    }
+
+    setName(keyword);
+  };
 
   return (
-    <Container>
+    <Container className="student-class-members-container">
       <Row className="justify-content-center">
-        <Card
-          className="mt-4 mb-4"
-          style={{
-            width: "40rem",
-            borderRadius: "10px",
-            border: "none",
-            backgroundColor: "#f5f5f5",
-            alignItems: "center",
-          }}
-        >
-          <h5 style={{ margin: "10px" }}>Frontend</h5>
-        </Card>
-      </Row>
-      <Row className="justify-content-center">
-        <Col xl={13} md={6}>
-          <Card className="mt-4" style={{ marginBottom: "10px" }}>
-            <Card.Header
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                backgroundColor: "#797EF6",
-              }}
-            >
-              <h5
-                className="d-inline p-2 m-1"
-                style={{
-                  color: "#ffffff",
-                }}
-              > 
-                Anggota
-              </h5>
-              <Form className="d-flex">
-                <Form.Control
-                  type="search"
-                  placeholder="Cari Anggota"
-                  className="me-2"
-                  aria-label="Search"
-                />
-              </Form>
-            </Card.Header>
-            <Card.Body>
-              {member.map((member, key) => (
-                <AddMember
-                  id={key}
-                  nama={member.nama}
-                  nim={member.nim}
-                />
-              ))}
-            </Card.Body>
+        <Col xs={9} className="student-class-members-wrapper">
+          <Card className="student-class-members-title shadow-sm">
+            <Row>
+              <Col>
+                <h3>Anggota</h3>
+                <h5>Front End Web Programming</h5>
+              </Col>
+            </Row>
           </Card>
+          <Row>
+            <Form className="student-class-members-search">
+              <div style={{ marginRight: "15px" }}>
+                <BsSearch size={35} />
+              </div>
+              <Form.Control
+                // style={{ width: "300px" }}
+                type="search"
+                value={name}
+                onChange={filter}
+                placeholder="Cari Anggota"
+                aria-label="Search"
+              />
+            </Form>
+          </Row>
+          {member && member.length > 0 ? (
+            member.map((member) => (
+              <Card key={member.id} className="student-class-members-items">
+                <ListGroup variant="flush">
+                  <ListGroup.Item>
+                    <Row>
+                      <Col xs="1">
+                        <FaChalkboardTeacher size={40} className="mx-2" />
+                      </Col>
+
+                      <Col xs={8} style={{ paddingTop: "10px" }}>
+                        <h6>{member.nama}</h6>
+                      </Col>
+                    </Row>
+                  </ListGroup.Item>
+                </ListGroup>
+              </Card>
+            ))
+          ) : (
+            <h6>Data tidak ditemukan</h6>
+          )}
         </Col>
       </Row>
     </Container>
   );
-}
+};
 
-export default StudentClassMembers
+export default StudentClassMembers;
