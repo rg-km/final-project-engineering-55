@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Form, Nav, Navbar } from 'react-bootstrap';
+import { Container, Dropdown, DropdownButton, Form, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import StudentNavIcon from "./StudentNavIcon";
 
@@ -22,9 +22,16 @@ const StudentNavbar = () => {
                 <Form.Control
                   type="search"
                   placeholder="Search"
-                  className="me-2"
+                  className="mx-5"
                   aria-label="Search"
                 />
+                <DropdownButton
+                  id="dropdown-basic-button"
+                  title="Logout"
+                  variant="success"
+                  >
+                  <Dropdown.Item as={Link} to={"/"} >Logout?</Dropdown.Item>
+                </DropdownButton>
                 <StudentNavIcon />
               </Form>
             </Navbar.Collapse>
