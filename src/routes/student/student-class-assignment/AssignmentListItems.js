@@ -1,19 +1,19 @@
 import { Col, Row, Card, ListGroup } from "react-bootstrap";
-import { MdOutlineQuiz } from "react-icons/md";
-import "./StudentClassQuiz.css";
+import { MdOutlineAssignment } from "react-icons/md";
+import "./StudentClassAssignment.css";
 
-const QuizListItems = ({ kuisItem }) => {
+const AssignmentListItems = ({ tugasItem }) => {
   return (
-    <Card className="student-class-quiz-items">
+    <Card className="assistant-class-assignment-items">
       <ListGroup variant="flush">
         <ListGroup.Item>
           <Row>
             <Col xs="1">
-              <MdOutlineQuiz size={40} className="mx-2" />
+              <MdOutlineAssignment size={40} className="mx-2" />
             </Col>
 
             <Col xs={8} style={{ paddingTop: "10px" }}>
-              <h6>{kuisItem.judul}</h6>
+              <h6>{tugasItem.judul}</h6>
             </Col>
           </Row>
         </ListGroup.Item>
@@ -27,7 +27,7 @@ const QuizListItems = ({ kuisItem }) => {
                   fontWeight: "normal",
                 }}
               >
-                {kuisItem.deskripsi}
+                {tugasItem.deskripsi}
               </h6>
             </Col>
           </Row>
@@ -35,7 +35,7 @@ const QuizListItems = ({ kuisItem }) => {
             <Col xs={1}></Col>
             <Col>
               <p style={{ marginBottom: "2px" }}>
-                Tenggat waktu: <strong>{kuisItem.tenggat}</strong>
+                Tenggat waktu: <strong>{tugasItem.tenggat}</strong>
               </p>
             </Col>
           </Row>
@@ -45,4 +45,4 @@ const QuizListItems = ({ kuisItem }) => {
   );
 };
 
-export default QuizListItems;
+export default AssignmentListItems;
