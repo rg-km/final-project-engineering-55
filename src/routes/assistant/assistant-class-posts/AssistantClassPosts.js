@@ -1,30 +1,37 @@
 import React, { useState } from 'react'
-import { Container, Card, Row, Col, Button, ListGroup } from 'react-bootstrap';
+import { Container, Card, Row, Col, Button } from 'react-bootstrap';
 import { BiEditAlt } from 'react-icons/bi';
 import PostsFormModal from './PostsFormModal';
-import { VscAccount } from 'react-icons/vsc';
 import './AssistantClassPosts.css';
+import PostsListItems from './PostsListItems';
 
 const AssistantClassPosts = () => {
+  const [showFormModal, setShowFormModal] = useState(false);
+  const [formModalType, setFormModalType] = useState("Tambah");
+  const [postId, setPostId] = useState(0);
+
+  const onClickAdd = () => {
+    setFormModalType("Tambah");
+    setShowFormModal(true);
+  };
   
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  
-  const posts = [
-    {
-      materi: "Materi 1",
-      file: "File 1",
-    },
-    {
-      materi: "Materi 2",
-      file: "File 2",
-    },
-    {
-      materi: "Materi 3",
-      file: "File 3",
-    },
-  ]
+  const [posts, setPosts] = useState([
+    // {
+    //   id: 1,
+    //   materi: "Materi 1",
+    //   file: "File 1",
+    // },
+    // {
+    //   id: 1,
+    //   materi: "Materi 2",
+    //   file: "File 2",
+    // },
+    // {
+    //   id: 1,
+    //   materi: "Materi 3",
+    //   file: "File 3",
+    // },
+  ])
   
   return (
     <div>
@@ -51,52 +58,29 @@ const AssistantClassPosts = () => {
             <Button
               className='assistant-class-post-items shadow-sm'
               variant="outline-dark"
-              onClick={handleShow}
+              onClick={onClickAdd}
             >
               <span className="add-post-caption">Mulai diskusi, unggah materi dan lainnya</span>
               <span className="add-post-icon">+</span>
             </Button>
             <PostsFormModal
-              show={show}
-              handleClose={handleClose}
+              postId={postId}
+              postsList={posts}
+              setPostsList={setPosts}
+              showFormModal={showFormModal}
+              setShowFormModal={setShowFormModal}
+              formModalType={formModalType}
+              setFormModalType={setFormModalType}
             />
             {posts.map((post, index) => (
-              <Card key={index} className='assistant-class-post-items shadow-sm'>
-                <ListGroup variant="flush">
-                  <ListGroup.Item>
-                    <Row>
-                      <Col xs={1}>
-                        <VscAccount size={40} className="mx-2"/>
-                      </Col>
-                      <Col xs={9}>
-                        <h4>Nama Asisten</h4>
-                        <h6>Diposting pada 12:12</h6>
-                      </Col>
-                      <Col xs={2}>
-                        <Button className='assistant-class-post-edit' variant="outline-dark">
-                          <BiEditAlt/> Edit
-                        </Button>
-                      </Col>
-                    </Row>
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <Row>
-                      <Col xs={1}>
-                      </Col>
-                      <Col>
-                        <h3>{post.materi}</h3>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col xs={1}>
-                      </Col>
-                      <Col>
-                        <h3>{post.file}</h3>
-                      </Col>
-                    </Row>
-                  </ListGroup.Item>
-                </ListGroup>
-              </Card>
+              <PostsListItems 
+                key={index}
+                id={post.id}
+                postItem={post}
+                setFormModalType={setFormModalType}
+                setShowFormModal={setShowFormModal}
+                setPostId={setPostId}
+              />
             ))}
           </Col>
           <Col>
