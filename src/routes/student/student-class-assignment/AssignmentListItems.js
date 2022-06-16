@@ -1,21 +1,8 @@
-import { Button, Col, Row, Card, ListGroup } from "react-bootstrap";
-import { BiEditAlt } from "react-icons/bi";
+import { Col, Row, Card, ListGroup } from "react-bootstrap";
 import { MdOutlineAssignment } from "react-icons/md";
-import "./AssistantClassAssignment.css";
+import "./StudentClassAssignment.css";
 
-const AssignmentListItems = ({
-  id,
-  tugasItem,
-  setFormModalType,
-  setShowFormModal,
-  setTugasId,
-}) => {
-  const onClickEdit = () => {
-    setFormModalType("Edit");
-    setShowFormModal(true);
-    setTugasId(id);
-  };
-
+const AssignmentListItems = ({ tugasItem }) => {
   return (
     <Card className="assistant-class-assignment-items">
       <ListGroup variant="flush">
@@ -27,15 +14,6 @@ const AssignmentListItems = ({
 
             <Col xs={8} style={{ paddingTop: "10px" }}>
               <h6>{tugasItem.judul}</h6>
-            </Col>
-            <Col xs={3}>
-              <Button
-                className="edit-class-button"
-                variant="outline-dark"
-                onClick={onClickEdit}
-              >
-                <BiEditAlt /> Edit
-              </Button>
             </Col>
           </Row>
         </ListGroup.Item>

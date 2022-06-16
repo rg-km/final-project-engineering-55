@@ -1,23 +1,10 @@
-import { Button, Col, Row, Card, ListGroup } from "react-bootstrap";
-import { BiEditAlt } from "react-icons/bi";
+import { Col, Row, Card, ListGroup } from "react-bootstrap";
 import { MdOutlineQuiz } from "react-icons/md";
-import "./AssistantClassQuiz.css";
+import "./StudentClassQuiz.css";
 
-const QuizListItems = ({
-  id,
-  kuisItem,
-  setFormModalType,
-  setShowFormModal,
-  setKuisId,
-}) => {
-  const onClickEdit = () => {
-    setFormModalType("Edit");
-    setShowFormModal(true);
-    setKuisId(id);
-  };
-
+const QuizListItems = ({ kuisItem }) => {
   return (
-    <Card className="assistant-class-assignment-items">
+    <Card className="student-class-quiz-items">
       <ListGroup variant="flush">
         <ListGroup.Item>
           <Row>
@@ -27,15 +14,6 @@ const QuizListItems = ({
 
             <Col xs={8} style={{ paddingTop: "10px" }}>
               <h6>{kuisItem.judul}</h6>
-            </Col>
-            <Col xs={3}>
-              <Button
-                className="edit-class-button"
-                variant="outline-dark"
-                onClick={onClickEdit}
-              >
-                <BiEditAlt /> Edit
-              </Button>
             </Col>
           </Row>
         </ListGroup.Item>

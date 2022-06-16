@@ -1,17 +1,20 @@
-.student-class-post-container {
+.student-class-quiz-container {
   margin-top: 50px;
 }
-.student-class-post-wrapper {
+
+.student-class-quiz-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.student-class-post-title {
+
+.student-class-quiz-title {
   margin-bottom: 20px;
   padding: 20px 20px 20px 40px;
   box-sizing: border-box;
 }
-.student-class-post-items {
+
+.student-class-quiz-items {
   padding: 5px 5px 5px 5px;
   margin-bottom: 20px;
   box-sizing: border-box;

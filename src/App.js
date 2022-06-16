@@ -28,7 +28,6 @@ import StudentClassAssignments from "./routes/student/student-class-assignment/S
 import StudentClassQuiz from "./routes/student/student-class-quiz/StudentClassQuiz";
 import StudentClassMembers from "./routes/student/student-class-members/StudentClassMembers";
 
-
 function App() {
   return (
     <Routes>
@@ -42,9 +41,12 @@ function App() {
           <Route index element={<StudentLogin />} />
         </Route>
       </Route>
-      
+
       {/* assistant pages */}
-      <Route path="/sign-up-option/assistant" element={<AssistantCreateAccount />} />
+      <Route
+        path="/sign-up-option/assistant"
+        element={<AssistantCreateAccount />}
+      />
       <Route path="/assistant/main" element={<AssistantMain />}>
         <Route path="home">
           <Route index element={<AssistantHome />} />
@@ -67,9 +69,12 @@ function App() {
           <Route index element={<AssistantClassMembers />} />
         </Route>
       </Route>
-      
+
       {/* student pages */}
-      <Route path="/sign-up-option/student" element={<StudentCreateAccount />} />
+      <Route
+        path="/sign-up-option/student"
+        element={<StudentCreateAccount />}
+      />
       <Route path="/student/main" element={<StudentMain />}>
         <Route path="home">
           <Route index element={<StudentHome />} />
@@ -92,7 +97,7 @@ function App() {
           <Route index element={<StudentClassMembers />} />
         </Route>
       </Route>
-      
+
       {/* page not found */}
       <Route path="*" element={<NotFound />} />
     </Routes>

@@ -1,27 +1,50 @@
 .assistant-class-post-container {
-    margin-top: 50px;
+  margin-top: 50px;
 }
+
+.assistant-class-post-container {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .assistant-class-post-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .assistant-class-post-title {
-    margin-bottom: 30px;
-    padding: 20px 20px 20px 40px;
-    box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 20px 20px 20px 40px;
+  box-sizing: border-box;
 }
 .assistant-class-post-items {
-    padding: 20px 10px 20px 10px;
-    margin-bottom: 30px;
-    box-sizing: border-box;
+  padding: 5px 5px 5px 5px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
 }
 .assistant-class-post-edit {
-    float: right;
+  float: right;
 }
 .add-post-caption {
-    float: left;
+  float: left;
 }
-.add-post-icon{
-    float: right;
+.add-post-icon {
+  float: right;
+}
+
+@media screen and (max-width: 768px) {
+  h3 {
+    font-size: 22px;
+  }
+  h5 {
+    font-size: 17px;
+  }
+  .assistant-class-post-title {
+    padding: 10px 10px 10px 10px;
+  }
+  .assistant-class-post-items {
+    padding: 5px 5px 5px 5px;
+  }
 }
