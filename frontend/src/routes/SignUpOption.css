@@ -1,42 +1,43 @@
 .option-wrapper {
-    width: 25rem;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
+  width: 25rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
 }
 .option-heading {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 .option-link {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
-.option-link:hover{
-    color: black;
+.option-link:hover {
+  color: black;
 }
 .option-card {
-    width: 25rem;
-    height: 8rem;
+  width: 25rem;
+  height: 8rem;
 }
 .option-card:hover {
-    border: 2px solid #000000;
+  border: 2px solid #000000;
 }
 .option-content {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
 }
 .option-title {
-    font-size: x-large;
-    margin-top: auto;
-    margin-bottom: auto;
+  font-size: x-large;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .option-body {
-    margin-top: -10px;
-    margin-bottom: auto;
+  margin-top: -10px;
+  margin-bottom: auto;
+  color: #747373;
 }
 .log-in-link {
-    text-decoration: none;
+  text-decoration: none;
 }

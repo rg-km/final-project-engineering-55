@@ -25,7 +25,7 @@ const StudentLogin = () => {
       </Form.Group>
       <div class="col-md-12 text-center">
         <Link to="/student/main/home">
-          <Button variant="primary">Login</Button>
+          <Button variant="outline-dark">Login</Button>
         </Link>
       </div>
     </Container>
