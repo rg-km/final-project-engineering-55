@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Card, Container, Row, Col, Button } from "react-bootstrap";
+import { Card, Container, Row, Col } from "react-bootstrap";
 import "./StudentClassQuiz.css";
 
 import QuizListItems from "./QuizListItems";

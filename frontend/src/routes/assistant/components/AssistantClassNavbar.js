@@ -23,12 +23,6 @@ const AssistantClassNavbar = () => {
             <Nav.Link as={Link} to={"/assistant/main/classes/members"} >Anggota</Nav.Link>
           </Nav>
           <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="mx-5"
-              aria-label="Search"
-            />
             <DropdownButton
               id="dropdown-basic-button"
               title="Logout"

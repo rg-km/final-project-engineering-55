@@ -33,7 +33,7 @@ const StudentClassPosts = () => {
               </Row>
             </Card>
             {posts.map((post, index) => (
-              <Card key={index} className="student-class-post-items">
+              <Card key={index} className="student-class-post-items shadow-sm">
                 <ListGroup variant="flush">
                   <ListGroup.Item>
                     <Row>
