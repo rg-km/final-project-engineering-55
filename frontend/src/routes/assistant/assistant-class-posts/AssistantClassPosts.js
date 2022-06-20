@@ -16,21 +16,21 @@ const AssistantClassPosts = () => {
   };
   
   const [posts, setPosts] = useState([
-    // {
-    //   id: 1,
-    //   materi: "Materi 1",
-    //   file: "File 1",
-    // },
-    // {
-    //   id: 1,
-    //   materi: "Materi 2",
-    //   file: "File 2",
-    // },
-    // {
-    //   id: 1,
-    //   materi: "Materi 3",
-    //   file: "File 3",
-    // },
+    {
+      id: 0,
+      description: "Materi 1",
+      file: "File 1",
+    },
+    {
+      id: 1,
+      description: "Materi 2",
+      file: "File 2",
+    },
+    {
+      id: 2,
+      description: "Materi 3",
+      file: "File 3",
+    },
   ])
   
   return (
@@ -40,19 +40,10 @@ const AssistantClassPosts = () => {
           <Col xs={9} className="assistant-class-post-wrapper">
             <Card className='assistant-class-post-title shadow-sm'>
               <Row>
-                <Col>
                 <h3>Front End</h3>
                 <h5>
                   Web Programming
                 </h5>
-                </Col>
-                <Col>
-                  <span>
-                  <Button className='edit-class-button' variant="outline-dark">
-                    <BiEditAlt/> Edit
-                  </Button>
-                  </span>
-                </Col>
               </Row>
             </Card>
             <Button

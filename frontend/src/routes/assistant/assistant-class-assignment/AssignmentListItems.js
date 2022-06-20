@@ -30,7 +30,7 @@ const AssignmentListItems = ({
             </Col>
             <Col xs={3}>
               <Button
-                className="edit-class-button"
+                className="assistant-class-assignment-button"
                 variant="outline-dark"
                 onClick={onClickEdit}
               >

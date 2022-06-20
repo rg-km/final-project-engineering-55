@@ -27,35 +27,32 @@ const AssistantClassMembers = () => {
     setShowFormModal(true);
   };
 
-  const USERS = [
-    { id: 1, nama: "Rizky" },
-    { id: 2, nama: "Dinda" },
-    { id: 3, nama: "Joko" },
-    { id: 4, nama: "Budi" },
-    { id: 5, nama: "Bambang" },
-    { id: 6, nama: "Laksmini" },
-    { id: 7, nama: "Ario" },
-    { id: 8, nama: "Ida" },
-    { id: 9, nama: "Zuhairi" },
-    { id: 10, nama: "Lala" },
-    { id: 11, nama: "Weni" },
-  ];
-
-  const [member, setMember] = useState(USERS);
+  const [members, setMembers] = useState([
+      { id: 1, nama: "Rizky" },
+      { id: 2, nama: "Dinda" },
+      { id: 3, nama: "Joko" },
+      { id: 4, nama: "Budi" },
+      { id: 5, nama: "Bambang" },
+  ]);
 
   const filter = (event) => {
     const keyword = event.target.value;
-
     if (keyword !== "") {
-      const filteredMember = USERS.filter((user) => {
-        return user.nama.toLowerCase().startsWith(keyword.toLowerCase());
+      const filteredMember = members.filter((member) => {
+        return member.nama.toLowerCase().startsWith(keyword.toLowerCase());
       });
-      setMember(filteredMember);
+      setMembers(filteredMember);
     } else {
-      setMember(USERS);
+      setMembers(members);
     }
 
     setName(keyword);
+  };
+
+  
+  const handleRemoveMember = (id) => {
+    setMembers(members.filter(member => member.id !== id));
+    console.log(id)
   };
 
   return (
@@ -71,7 +68,7 @@ const AssistantClassMembers = () => {
               <Col>
                 <span>
                   <Button
-                    className="edit-class-button"
+                    className="assistant-members-button"
                     variant="outline-dark"
                     onClick={onClickAdd}
                   >
@@ -79,8 +76,8 @@ const AssistantClassMembers = () => {
                   </Button>
                 </span>
                 <MemberFormModal
-                  memberList={member}
-                  setMemberList={setMember}
+                  memberList={members}
+                  setMemberList={setMembers}
                   showFormModal={showFormModal}
                   setShowFormModal={setShowFormModal}
                   formModalType={formModalType}
@@ -105,8 +102,8 @@ const AssistantClassMembers = () => {
               />
             </Form>
           </Row>
-          {member && member.length > 0 ? (
-            member.map((member) => (
+          {members && members.length > 0 ? (
+            members.map((member) => (
               <Card key={member.id} className="assistant-class-members-items">
                 <ListGroup variant="flush">
                   <ListGroup.Item>
@@ -120,11 +117,14 @@ const AssistantClassMembers = () => {
                       </Col>
                       <Col xs={3}>
                         <Button
-                          className="edit-class-button"
+                          className="assistant-members-button"
                           variant="outline-dark"
                           // onClick={onClickDelete}
                         >
-                          <AiOutlineDelete style={{ marginBottom: "2px" }} />{" "}
+                          <AiOutlineDelete
+                            style={{ marginBottom: "2px" }}
+                            onClick={handleRemoveMember.bind(this, member.id)}
+                            />{" "}
                           Hapus
                         </Button>
                       </Col>

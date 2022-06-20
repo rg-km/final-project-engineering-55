@@ -41,7 +41,7 @@ const AssistantClassQuiz = () => {
     <Container className="assistant-class-quiz-container">
       <Row className="justify-content-center">
         <Col xs={9} className="assistant-class-quiz-wrapper">
-          <Card className="assistant-class-assignment-title shadow-sm">
+          <Card className="assistant-class-quiz-title shadow-sm">
             <Row>
               <Col>
                 <h3>Kuis</h3>
@@ -50,7 +50,7 @@ const AssistantClassQuiz = () => {
               <Col>
                 <span>
                   <Button
-                    className="edit-class-button"
+                    className="assistant-class-quiz-button"
                     variant="outline-dark"
                     onClick={onClickAdd}
                   >

@@ -17,7 +17,7 @@ const QuizListItems = ({
   };
 
   return (
-    <Card className="assistant-class-assignment-items">
+    <Card className="assistant-class-quiz-items">
       <ListGroup variant="flush">
         <ListGroup.Item>
           <Row>
@@ -30,7 +30,7 @@ const QuizListItems = ({
             </Col>
             <Col xs={3}>
               <Button
-                className="edit-class-button"
+                className="assistant-class-quiz-button"
                 variant="outline-dark"
                 onClick={onClickEdit}
               >

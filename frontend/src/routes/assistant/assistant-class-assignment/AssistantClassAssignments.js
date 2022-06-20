@@ -49,7 +49,7 @@ const AssistantClassAssignments = () => {
               <Col>
                 <span>
                   <Button
-                    className="edit-class-button"
+                    className="assistant-class-assignment-button"
                     variant="outline-dark"
                     onClick={onClickAdd}
                   >

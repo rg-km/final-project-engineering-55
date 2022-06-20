@@ -22,23 +22,23 @@ const StudentClasses = () => {
   
   return (
     <div>
-        <Container className='student-classes-wrapper'>
-            <h1 className='student-classes-title'>Kelas</h1>
-            <Row>
-                <Col xs={9} className="student-classes-content">
-                {classes.map((item, index) => (
-                    <Link to="/student/main/classes/posts" style={{textDecoration: 'none'}}>
-                        <Card key={index} className='student-classes-card shadow-sm'>
-                            <h3>{item.kelas}</h3>
-                            <h5>
-                            {item.jurusan}
-                            </h5>
-                        </Card>
-                    </Link>
-                ))}
-                </Col>
-            </Row>
-        </Container>
+      <Container className='student-classes-wrapper'>
+        <h1 className='student-classes-title'>Kelas</h1>
+        <Row>
+          <Col xs={9} className="student-classes-content">
+          {classes.map((item, index) => (
+            <Link to="/student/main/classes/posts" style={{textDecoration: 'none'}}>
+              <Card key={index} className='student-classes-card shadow-sm'>
+                <h3>{item.kelas}</h3>
+                <h5>
+                {item.jurusan}
+                </h5>
+              </Card>
+            </Link>
+          ))}
+          </Col>
+        </Row>
+      </Container>
     </div>
   )
 }
