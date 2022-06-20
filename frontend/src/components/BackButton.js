@@ -8,7 +8,10 @@ const BackButton = () => {
   
     return (
         <div>
-            <Button variant="outline-dark" onClick={() => navigate(-1)}>
+            <Button
+                variant="outline-dark"
+                onClick={() => navigate(-1)}
+            >
                 <VscChevronLeft/> Back
             </Button>
         </div>

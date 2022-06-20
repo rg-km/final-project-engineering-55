@@ -1,15 +1,9 @@
-.header-content {
-  padding-top: 5px;
-  text-align: center;
-  font-weight: bold;
-}
 .main-wrapper {
   display: flex;
   justify-content: center;
 }
 .main-heading {
-  margin-top: 15%;
-
+  margin-top: 13%;
   text-align: left;
   color: #212023;
   font-size: 37px;
@@ -18,7 +12,7 @@
 .main-content {
   margin-top: 5%;
   text-align: left;
-  font-size: 15px;
+  font-size: 18px;
 }
 .main-footer {
   margin-top: 5%;

@@ -21,7 +21,7 @@
   height: 8rem;
 }
 .option-card:hover {
-  border: 2px solid #000000;
+  border: 2px solid #a0a0a0;
 }
 .option-content {
   display: flex;

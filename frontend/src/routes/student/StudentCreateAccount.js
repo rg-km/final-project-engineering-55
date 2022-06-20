@@ -9,16 +9,16 @@ import {
   Container,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import NavLogo from "../../components/NavLogo";
 
 const StudentCreateAccount = () => {
   return (
+    <>
+    <NavLogo />
     <Container>
-      <h1 className="mt-3">
-        <center>VLab</center>
-      </h1>
       <Row className="justify-content-center">
-        <Col xl={5} md={4}>
-          <Card className="my-4 px-4 mx-5 py-3">
+        <Col xl={6} md={4} className="mt-4">
+          <Card className="my-2 px-4 mx-5 py-3 shadow">
             <h5 className="mb-4 text-center">Lengkapi Profil Anda</h5>
             <Form.Group>
               <FloatingLabel
@@ -28,6 +28,7 @@ const StudentCreateAccount = () => {
               >
                 <Form.Control
                   type="text"
+                  className="shadow-sm"
                   placeholder="Username"
                   name="username"
                 />
@@ -39,7 +40,11 @@ const StudentCreateAccount = () => {
                 label="Email"
                 className="mb-3"
               >
-                <Form.Control type="email" placeholder="Email" name="email" />
+                <Form.Control
+                type="email"
+                className="shadow-sm"
+                placeholder="Email"
+                name="email" />
               </FloatingLabel>
             </Form.Group>
             <Form.Group>
@@ -50,6 +55,7 @@ const StudentCreateAccount = () => {
               >
                 <Form.Control
                   type="password"
+                  className="shadow-sm"
                   placeholder="Password"
                   name="password"
                 />
@@ -63,20 +69,22 @@ const StudentCreateAccount = () => {
               >
                 <Form.Control
                   type="password"
+                  className="shadow-sm"
                   placeholder="Konfirmasi Password"
                   name="confirmPassword"
                 />
               </FloatingLabel>
             </Form.Group>
             <div class="col-md-12 text-center">
-              <Link to="/login/student">
-                <Button variant="outline-dark">Daftar</Button>
+              <Link to="/login/student" class="d-grid gap-2" style={{textDecoration: "none"}}>
+                <Button size="lg" variant="outline-dark">Daftar</Button>
               </Link>
             </div>
           </Card>
         </Col>
       </Row>
     </Container>
+    </>
   );
 };
 

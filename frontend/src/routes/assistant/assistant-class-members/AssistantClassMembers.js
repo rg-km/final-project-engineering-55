@@ -104,7 +104,7 @@ const AssistantClassMembers = () => {
           </Row>
           {members && members.length > 0 ? (
             members.map((member) => (
-              <Card key={member.id} className="assistant-class-members-items">
+              <Card key={member.id} className="assistant-class-members-items shadow-sm">
                 <ListGroup variant="flush">
                   <ListGroup.Item>
                     <Row>

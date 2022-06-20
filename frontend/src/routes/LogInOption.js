@@ -1,19 +1,19 @@
 import React from "react";
 import { Container, Card, Row, Col, Nav } from "react-bootstrap";
 import { Link, Outlet } from "react-router-dom";
+import NavLogo from "../components/NavLogo";
 
 const LogInOption = () => {
   return (
+    <>
+    <NavLogo />
     <Container>
-      <h1 className="mt-3">
-        <center>VLab</center>
-      </h1>
-      <h5 className="mt-5 mb-3">
+      <h3 className="mt-5 mb-3">
         <center>Masuk Sebagai</center>
-      </h5>
+      </h3>
       <Row className="justify-content-center">
         <Col xs={10} md={4}>
-          <Card className="mx-2">
+          <Card className="mx-2 shadow">
             <Card.Header>
               <Nav fill variant="pills">
                 <Nav.Item>
@@ -35,6 +35,7 @@ const LogInOption = () => {
         </Col>
       </Row>
     </Container>
+    </>
   );
 };
 

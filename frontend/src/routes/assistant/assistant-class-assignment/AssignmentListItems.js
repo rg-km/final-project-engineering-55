@@ -17,7 +17,7 @@ const AssignmentListItems = ({
   };
 
   return (
-    <Card className="assistant-class-assignment-items">
+    <Card className="assistant-class-assignment-items shadow-sm">
       <ListGroup variant="flush">
         <ListGroup.Item>
           <Row>

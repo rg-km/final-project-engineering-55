@@ -17,7 +17,7 @@ const QuizListItems = ({
   };
 
   return (
-    <Card className="assistant-class-quiz-items">
+    <Card className="assistant-class-quiz-items shadow-sm">
       <ListGroup variant="flush">
         <ListGroup.Item>
           <Row>

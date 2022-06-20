@@ -24,8 +24,8 @@ const AssistantLogin = () => {
         </FloatingLabel>
       </Form.Group>
       <div class="col-md-12 text-center">
-        <Link to="/assistant/main/home">
-          <Button variant="outline-dark">Login</Button>
+        <Link to="/assistant/main/home" class="d-grid gap-2" style={{textDecoration: "none"}}>
+          <Button size="lg" variant="outline-dark">Login</Button>
         </Link>
       </div>
     </Container>

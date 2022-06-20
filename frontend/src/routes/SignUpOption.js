@@ -5,23 +5,20 @@ import { FaChalkboardTeacher } from "react-icons/fa";
 import { VscAccount } from "react-icons/vsc";
 import "./SignUpOption.css";
 import BackButton from "../components/BackButton";
+import NavLogo from "../components/NavLogo";
 
 const SignUpOption = () => {
   return (
     <div>
-      <header>
-        <h1 className="mt-3">
-          <center>VLab</center>
-        </h1>
-      </header>
-      <main className="option-wrapper">
+      <NavLogo />
+      <main className="option-wrapper mt-4">
         <BackButton />
         <Row>
           <h2 className="option-heading">Pilih Akun</h2>
         </Row>
         <Row>
           <Link className="option-link" to="/sign-up-option/assistant">
-            <Card className="option-card rounded-pill">
+            <Card className="option-card rounded-pill shadow-sm">
               <Row>
                 <Col sm={3}>
                   <span className="option-icon">
@@ -41,7 +38,7 @@ const SignUpOption = () => {
         <br></br>
         <Row>
           <Link className="option-link" to="/sign-up-option/student">
-            <Card className="option-card rounded-pill">
+            <Card className="option-card rounded-pill shadow-sm">
               <Row>
                 <Col sm={3}>
                   <span className="option-icon">

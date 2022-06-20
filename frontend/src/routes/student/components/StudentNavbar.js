@@ -22,7 +22,7 @@ const StudentNavbar = () => {
                 <DropdownButton
                   id="dropdown-basic-button"
                   title="Logout"
-                  variant="success"
+                  variant="primary"
                   >
                   <Dropdown.Item as={Link} to={"/"} >Logout?</Dropdown.Item>
                 </DropdownButton>

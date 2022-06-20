@@ -18,7 +18,7 @@ const PostsListItems = ({
 
   return (
     <div>
-      <Card className="assistant-class-post-items">
+      <Card className="assistant-class-post-items shadow-sm">
         <ListGroup variant="flush">
           <ListGroup.Item>
             <Row>

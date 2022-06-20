@@ -3,14 +3,12 @@ import { Link } from "react-router-dom";
 import HomePageImage from "../assets/Student-work.png";
 import { Button, Container, Row, Col } from "react-bootstrap";
 import "./Homepage.css";
+import NavLogo from "../components/NavLogo"
 
 const Homepage = () => {
   return (
     <div>
-      <header className="header-wrapper">
-        <h1 className="header-content">VLab</h1>
-      </header>
-      <hr />
+      <NavLogo />
       <main className="main-wrapper">
         <Container>
           <Row>

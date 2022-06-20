@@ -27,6 +27,8 @@ import StudentClassPosts from "./routes/student/student-class-posts/StudentClass
 import StudentClassAssignments from "./routes/student/student-class-assignment/StudentClassAssignments";
 import StudentClassQuiz from "./routes/student/student-class-quiz/StudentClassQuiz";
 import StudentClassMembers from "./routes/student/student-class-members/StudentClassMembers";
+import StudentQuiz from "./routes/student/student-quiz/StudentQuiz";
+import StudentAssignments from "./routes/student/student-assignments/StudentAssignments";
 
 function App() {
   return (
@@ -97,6 +99,8 @@ function App() {
           <Route index element={<StudentClassMembers />} />
         </Route>
       </Route>
+      <Route path="/student/main/classes/quiz/id" element={<StudentQuiz />} />
+      <Route path="/student/main/classes/assignments/id" element={<StudentAssignments />} />
 
       {/* page not found */}
       <Route path="*" element={<NotFound />} />
