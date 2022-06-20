@@ -119,11 +119,10 @@ const AssistantClassMembers = () => {
                         <Button
                           className="assistant-members-button"
                           variant="outline-dark"
-                          // onClick={onClickDelete}
+                          onClick={handleRemoveMember.bind(this, member.id)}
                         >
                           <AiOutlineDelete
                             style={{ marginBottom: "2px" }}
-                            onClick={handleRemoveMember.bind(this, member.id)}
                             />{" "}
                           Hapus
                         </Button>
