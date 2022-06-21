@@ -27,32 +27,33 @@ const AssistantClassMembers = () => {
     setShowFormModal(true);
   };
 
-  const [members, setMembers] = useState([
-      { id: 1, nama: "Rizky" },
-      { id: 2, nama: "Dinda" },
-      { id: 3, nama: "Joko" },
-      { id: 4, nama: "Budi" },
-      { id: 5, nama: "Bambang" },
-  ]);
+  const USERS = [
+    { id: 1, nama: "Rizky" },
+    { id: 2, nama: "Dinda" },
+    { id: 3, nama: "Joko" },
+    { id: 4, nama: "Budi" },
+    { id: 5, nama: "Bambang" },
+  ];
+
+  const [members, setMembers] = useState(USERS);
 
   const filter = (event) => {
     const keyword = event.target.value;
     if (keyword !== "") {
-      const filteredMember = members.filter((member) => {
+      const filteredMember = USERS.filter((member) => {
         return member.nama.toLowerCase().startsWith(keyword.toLowerCase());
       });
       setMembers(filteredMember);
     } else {
-      setMembers(members);
+      setMembers(USERS);
     }
 
     setName(keyword);
   };
 
-  
   const handleRemoveMember = (id) => {
-    setMembers(members.filter(member => member.id !== id));
-    console.log(id)
+    setMembers(members.filter((member) => member.id !== id));
+    console.log(id);
   };
 
   return (
@@ -104,7 +105,10 @@ const AssistantClassMembers = () => {
           </Row>
           {members && members.length > 0 ? (
             members.map((member) => (
-              <Card key={member.id} className="assistant-class-members-items shadow-sm">
+              <Card
+                key={member.id}
+                className="assistant-class-members-items shadow-sm"
+              >
                 <ListGroup variant="flush">
                   <ListGroup.Item>
                     <Row>
@@ -121,9 +125,7 @@ const AssistantClassMembers = () => {
                           variant="outline-dark"
                           onClick={handleRemoveMember.bind(this, member.id)}
                         >
-                          <AiOutlineDelete
-                            style={{ marginBottom: "2px" }}
-                            />{" "}
+                          <AiOutlineDelete style={{ marginBottom: "2px" }} />{" "}
                           Hapus
                         </Button>
                       </Col>
