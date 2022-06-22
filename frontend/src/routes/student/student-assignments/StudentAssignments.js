@@ -41,6 +41,7 @@ const StudentAssignments = () => {
               borderRadius: "10px",
               padding: "15px",
             }}
+            className="shadow-sm"
           >
             <Card.Header className="bg-white">
               <h6 style={{ float: "right", fontSize: "17px" }}>
@@ -70,6 +71,7 @@ const StudentAssignments = () => {
               borderRadius: "10px",
               padding: "15px",
             }}
+            className="shadow"
           >
             <Card.Header className="bg-white">
               <h6 className="text-center" style={{ fontSize: "17px" }}>

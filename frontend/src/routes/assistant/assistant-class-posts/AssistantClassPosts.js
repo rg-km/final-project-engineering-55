@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Container, Card, Row, Col, Button } from 'react-bootstrap';
-import { BiEditAlt } from 'react-icons/bi';
 import PostsFormModal from './PostsFormModal';
 import './AssistantClassPosts.css';
 import PostsListItems from './PostsListItems';
@@ -47,7 +46,7 @@ const AssistantClassPosts = () => {
               </Row>
             </Card>
             <Button
-              className='assistant-class-post-items shadow-sm'
+              className='assistant-class-post-items'
               variant="outline-dark"
               onClick={onClickAdd}
             >
