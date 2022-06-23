@@ -15,6 +15,7 @@ const NavLogo = () => {
             width="60"
             height="60"
             className="d-inline-block align-top"
+            alt="VLab Logo"
           />
         </Container>
       </Navbar>
