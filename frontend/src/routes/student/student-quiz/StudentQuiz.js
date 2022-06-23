@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { quiz as quizData } from "./QuizData";
-import { Container } from "react-bootstrap";
+import { Container, Navbar } from "react-bootstrap";
 import BackButton from "../../../components/BackButton";
 
 const StudentQuiz = () => {
@@ -60,14 +60,20 @@ const StudentQuiz = () => {
     };
   
     return (
-      <Container >
-        <h2 className="text-center mb-3 mt-3">
-          <span  style={{float: "left"}}>
-            <BackButton />
+      <>
+      <Navbar bg="light" className="shadow">
+        <Container>
+          <BackButton />
+          <span style={{fontWeight:"bold", fontSize:"40px"}}>
+              <center>Kuis</center>
           </span>
-          Kuis <span style={{float: "right"}} >Score: {score.correct} - {score.false}</span>
-        </h2>
-        <div className="card mb-3">
+          <span style={{fontWeight:"bold", fontSize:"40px"}}>
+            Score: {score.correct} - {score.false}
+          </span>
+          </Container>
+      </Navbar>
+      <Container >
+        <div className="card mb-3 mt-5">
           <div
             className="card-body"
             style={{
@@ -171,6 +177,7 @@ const StudentQuiz = () => {
           )}
         </div>
       </Container>
+      </>
     );
 }
 

@@ -16,6 +16,7 @@ import AssistantClassPosts from "./routes/assistant/assistant-class-posts/Assist
 import AssistantClassAssignments from "./routes/assistant/assistant-class-assignment/AssistantClassAssignments";
 import AssistantClassQuiz from "./routes/assistant/assistant-class-quiz/AssistantClassQuiz";
 import AssistantClassMembers from "./routes/assistant/assistant-class-members/AssistantClassMembers";
+import AddQuiz from "./routes/assistant/assistant-add-quiz/AddQuiz"
 
 import StudentCreateAccount from "./routes/student/StudentCreateAccount";
 import StudentLogin from "./routes/student/StudentLogin";
@@ -71,6 +72,10 @@ function App() {
           <Route index element={<AssistantClassMembers />} />
         </Route>
       </Route>
+      <Route
+        path="/assistant/main/classes/quiz/id"
+        element={<AddQuiz />}
+      />
 
       {/* student pages */}
       <Route

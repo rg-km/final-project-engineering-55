@@ -19,16 +19,22 @@ const AssistantClasses = () => {
       id: 0,
       kelas: "Front End",
       jurusan: "Web Programming",
+      hari: "Senin",
+      jam: "13:30",
     },
     {
       id: 1,
       kelas: "Back End",
       jurusan: "Web Programming",
+      hari: "Selasa",
+      jam: "13:30",
     },
     {
       id: 2,
       kelas: "Dev Ops",
       jurusan: "Web Programming",
+      hari: "Rabu",
+      jam: "14:30",
     },
   ]);
   
