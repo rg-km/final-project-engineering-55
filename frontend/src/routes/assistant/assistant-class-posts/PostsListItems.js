@@ -2,18 +2,24 @@ import React from "react";
 import { VscAccount } from "react-icons/vsc";
 import { Card, Row, Col, Button, ListGroup } from "react-bootstrap";
 import { BiEditAlt } from "react-icons/bi";
+import { AiOutlineDelete } from "react-icons/ai";
 
 const PostsListItems = ({
   id,
   postItem,
+  postsList,
   setFormModalType,
   setShowFormModal,
   setPostId,
+  setPostsList,
 }) => {
   const onClickEdit = () => {
     setFormModalType("Edit");
     setShowFormModal(true);
     setPostId(id);
+  };
+  const handleRemoveItem = (id) => {
+    setPostsList(postsList.filter(item => item.id !== id));
   };
 
   return (
@@ -25,7 +31,7 @@ const PostsListItems = ({
               <Col xs={1}>
                 <VscAccount size={40} className="mx-2" />
               </Col>
-              <Col xs={9}>
+              <Col xs={8}>
                 <h6>Nama Asisten</h6>
                 <h6
                   style={{
@@ -36,14 +42,22 @@ const PostsListItems = ({
                   Diposting pada 12:12
                 </h6>
               </Col>
-              <Col xs={2}>
-                <Button
-                  className="assistant-class-post-edit"
-                  variant="outline-dark"
-                  onClick={onClickEdit}
-                >
-                  <BiEditAlt /> Edit
-                </Button>
+              <Col>
+                <span className='action-class-button'>
+                  <Button
+                    variant="outline-dark"
+                    onClick={onClickEdit}
+                  >
+                  <BiEditAlt/> Edit
+                  </Button>
+                  &nbsp;
+                  <Button
+                    variant="outline-dark"
+                    onClick={handleRemoveItem.bind(this, id)}
+                  >
+                    <AiOutlineDelete/> Hapus
+                  </Button>
+                </span>
               </Col>
             </Row>
           </ListGroup.Item>

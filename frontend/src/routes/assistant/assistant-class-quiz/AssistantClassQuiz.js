@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Card, Container, Row, Col, Button } from "react-bootstrap";
 import "./AssistantClassQuiz.css";
-
+import { Link } from "react-router-dom";
 import QuizFormModal from "./QuizFormModal";
 import QuizListItems from "./QuizListItems";
 
@@ -11,10 +11,10 @@ const AssistantClassQuiz = () => {
   const [formModalType, setFormModalType] = useState("Tambah");
   const [kuisId, setKuisId] = useState(0);
 
-  const onClickAdd = () => {
-    setFormModalType("Tambah");
-    setShowFormModal(true);
-  };
+  // const onClickAdd = () => {
+  //   setFormModalType("Tambah");
+  //   setShowFormModal(true);
+  // };
 
   const [kuis, setKuis] = useState([
     {
@@ -49,13 +49,15 @@ const AssistantClassQuiz = () => {
               </Col>
               <Col>
                 <span>
+                <Link to="/assistant/main/classes/quiz/id" style={{textDecoration: 'none'}}>
                   <Button
                     className="assistant-class-quiz-button"
                     variant="outline-dark"
-                    onClick={onClickAdd}
+                    // onClick={onClickAdd}
                   >
                     + Tambah Kuis
                   </Button>
+                </Link>
                 </span>
                 <QuizFormModal
                   kuisList={kuis}
@@ -68,11 +70,13 @@ const AssistantClassQuiz = () => {
               </Col>
             </Row>
           </Card>
-          {kuis.map((kuis, key) => (
+          {kuis.map((item, key) => (
             <QuizListItems
               key={key}
-              id={kuis.id}
-              kuisItem={kuis}
+              id={item.id}
+              kuisItem={item}
+              kuisList={kuis}
+              setKuisList={setKuis}
               setFormModalType={setFormModalType}
               setShowFormModal={setShowFormModal}
               setKuisId={setKuisId}

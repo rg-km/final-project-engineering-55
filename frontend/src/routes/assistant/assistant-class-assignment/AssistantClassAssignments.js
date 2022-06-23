@@ -68,11 +68,13 @@ const AssistantClassAssignments = () => {
               </Col>
             </Row>
           </Card>
-          {tugas.map((tugas, key) => (
+          {tugas.map((item, key) => (
             <AssignmentListItems
               key={key}
-              id={tugas.id}
-              tugasItem={tugas}
+              id={item.id}
+              tugasItem={item}
+              tugasList={tugas}
+              setTugasList={setTugas}
               setFormModalType={setFormModalType}
               setShowFormModal={setShowFormModal}
               setTugasId={setTugasId}

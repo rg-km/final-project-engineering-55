@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Card, Form, Button, Navbar } from "react-bootstrap";
 import BackButton from "../../../components/BackButton";
 
 const StudentAssignments = () => {
@@ -14,18 +14,24 @@ const StudentAssignments = () => {
   const { id } = useParams();
 
   return (
+    <>
+      <Navbar bg="light" className="shadow">
+        <Container>
+          <BackButton />
+          <span style={{fontWeight:"bold", fontSize:"40px"}}>
+              <center>Judul Tugas</center>
+          </span>
+          <span style={{fontWeight:"bold", fontSize:"40px"}}>
+              <center></center>
+          </span>
+          </Container>
+      </Navbar>
     <Container
       style={{
         paddingLeft: "2.5rem",
         paddingRight: "2.5rem",
       }}
     >
-      <h2 className="text-center mb-3 mt-3" style={{ float: "center" }}>
-        <div style={{ float: "left" }}>
-          <BackButton />
-        </div>
-        Judul Tugas
-      </h2>
       <Row>
         <Col
           xs={8}
@@ -103,6 +109,7 @@ const StudentAssignments = () => {
         </Col>
       </Row>
     </Container>
+    </>
   );
 };
 

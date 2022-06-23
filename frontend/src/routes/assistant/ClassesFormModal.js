@@ -72,7 +72,7 @@ const ClassesFormModal = (props) => {
               value={formValues.kelas ? formValues.kelas : ""}
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="ControlDeskripsi">
+          <Form.Group className="mb-3" controlId="ControlJurusan">
             <Form.Label>Jurusan</Form.Label>
             <Form.Control
               type="text"
@@ -80,6 +80,26 @@ const ClassesFormModal = (props) => {
               placeholder="Masukkan Nama Jurusan"
               onChange={handleInputChange}
               value={formValues.jurusan ? formValues.jurusan : ""}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="ControlHari">
+            <Form.Label>Hari</Form.Label>
+            <Form.Control
+              type="text"
+              name="hari"
+              placeholder="Masukkan Hari"
+              onChange={handleInputChange}
+              value={formValues.hari ? formValues.hari : ""}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="ControlJam">
+            <Form.Label>Jam</Form.Label>
+            <Form.Control
+              type="text"
+              name="jam"
+              placeholder="Masukkan Jam"
+              onChange={handleInputChange}
+              value={formValues.jam ? formValues.jam : ""}
             />
           </Form.Group>
         </Form>

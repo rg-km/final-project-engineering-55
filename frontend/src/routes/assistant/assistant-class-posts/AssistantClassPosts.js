@@ -67,6 +67,8 @@ const AssistantClassPosts = () => {
                 key={index}
                 id={post.id}
                 postItem={post}
+                postsList={posts}
+                setPostsList={setPosts}
                 setFormModalType={setFormModalType}
                 setShowFormModal={setShowFormModal}
                 setPostId={setPostId}
