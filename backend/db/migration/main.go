@@ -28,10 +28,12 @@ func main() {
 		nama_kelas varchar(50) not null
 	);
 
+	
+
 	CREATE TABLE IF NOT EXISTS materi (
 		id integer not null primary key AUTOINCREMENT,
 		kode_materi char(5) not null,
-		judul_materi varchar(255) not null,
+		judul_materi varchar(255) not null
 	);
 
 	CREATE TABLE IF NOT EXISTS kuis (
@@ -84,10 +86,7 @@ func main() {
 		jadwal_id integer not null,
 		FOREIGN KEY (kuis_id) REFERENCES kuis(id),
 		FOREIGN KEY (jadwal_id) REFERENCES jadwal(id)
-	);
-	
-	
-	`)
+	);`)
 
 	if err != nil {
 		panic(err)

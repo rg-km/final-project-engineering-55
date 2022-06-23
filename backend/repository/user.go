@@ -15,7 +15,7 @@ func NewUserRepository(db *sql.DB) *UserRepository {
 
 func (u *UserRepository) FetchUserByID(id int64) (Users, error) {
 	var user Users
-	err := u.db.QueryRow("SELECT * FROM users WHERE id = ?", id).Scan(&user.ID, &user.Username, &user.Password, &user.Role, &user.Loggedin, &user.Token)
+	err := u.db.QueryRow("SELECT * FROM users WHERE id = ?", id).Scan(&user.ID, &user.Username, &user.Email, &user.Password, &user.Role, &user.Loggedin, &user.Token)
 	if err != nil {
 		return user, nil
 	}
@@ -32,7 +32,7 @@ func (u *UserRepository) FetchUsers() ([]Users, error) {
 	var users []Users
 	for rows.Next() {
 		var user Users
-		err := rows.Scan(&user.ID, &user.Username, &user.Password,
+		err := rows.Scan(&user.ID, &user.Username, &user.Email, &user.Password,
 			&user.Role, &user.Loggedin, &user.Token)
 		if err != nil {
 			return nil, err
@@ -40,7 +40,7 @@ func (u *UserRepository) FetchUsers() ([]Users, error) {
 		users = append(users, user)
 	}
 
-		return users, nil 
+	return users, nil
 }
 
 func (u *UserRepository) Login(username string, password string) (*string, error) {
@@ -50,15 +50,15 @@ func (u *UserRepository) Login(username string, password string) (*string, error
 	if err != nil {
 		return nil, errors.New("Login failed")
 	}
-	return &user.Username, nil 
+	return &user.Username, nil
 }
 
 func (u *UserRepository) InsertUser(username string, password string, role string, loggedin bool) error {
 	_, err := u.db.Exec(`INSERT INTO users (username, password, role, loggedin) VALUES (?, ?,?, ?)`, username, password, role, loggedin)
-	if err != nil{
+	if err != nil {
 		return err
 	}
-	return nil 
+	return nil
 }
 
 func (u *UserRepository) FetchUserRole(username string) (*string, error) {
@@ -67,5 +67,5 @@ func (u *UserRepository) FetchUserRole(username string) (*string, error) {
 	if err != nil {
 		return nil, err
 	}
-	return &user.Role, nil 
+	return &user.Role, nil
 }

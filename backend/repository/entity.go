@@ -16,19 +16,19 @@ type Kelas struct {
 	ID        int64  `db:"id"`
 	KodeKelas string `db:"kode_kelas"`
 	NamaKelas string `db:"nama_kelas"`
+	UsersID   int64  `db:"users_id"`
 }
 
 type Materi struct {
-	ID           int64  `db:"id"`
-	KodeMateri   string `db:"kode_materi"`
-	JudulMateri  string `db:"judul_materi"`
-	MatakuliahId int64  `db:"mk_id"`
+	ID          int64  `db:"id"`
+	KodeMateri  string `db:"kode_materi"`
+	JudulMateri string `db:"judul_materi"`
 }
 
 type Kuis struct {
-	ID       int64  `db:"id"`
-	KodeKuis string `db:"kode_kuis"`
-	MateriId int64  `db:"materi_id"`
+	ID        int64  `db:"id"`
+	KodeKuis  string `db:"kode_kuis"`
+	JudulKuis string `db:"judul_materi"`
 }
 
 type soalkuis struct {
@@ -56,4 +56,11 @@ type JadwalKuis struct {
 	ID       int64 `db:"id"`
 	KuisId   int64 `db:"kuis_id"`
 	JadwalId int64 `db:"jadwal_id"`
+}
+
+type Tugas struct {
+	ID         int64  `db:"id"`
+	JudulTugas int64  `db:"judul_tugas"`
+	UsersID    int64  `db:"users_id"`
+	UserName   string `db:"username"`
 }

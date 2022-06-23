@@ -17,6 +17,7 @@ func NewAPI(usersRepo repository.UserRepository) API {
 	}
 
 	mux.Handle("/api/user/login", api.POST(http.HandlerFunc(api.login)))
+	mux.Handle("/api/user/")
 	mux.Handle("/api/user/logout", api.POST(http.HandlerFunc(api.logout)))
 
 	// API with AuthMiddleware:

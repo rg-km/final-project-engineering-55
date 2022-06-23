@@ -34,7 +34,7 @@ type Claims struct {
 }
 
 func (api *API) login(w http.ResponseWriter, req *http.Request) {
-	api.AllowOrigin(w, req)
+	//api.AllowOrigin(w, req)
 	var user User
 	err := json.NewDecoder(req.Body).Decode(&user)
 	if err != nil {
@@ -89,7 +89,7 @@ func (api *API) login(w http.ResponseWriter, req *http.Request) {
 }
 
 func (api *API) logout(w http.ResponseWriter, req *http.Request) {
-	api.AllowOrigin(w, req)
+	// returnapi.AllowOrigin(w, req)
 
 	token, err := req.Cookie("token")
 	if err != nil {
