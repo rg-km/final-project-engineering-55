@@ -9,6 +9,7 @@ require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
 	github.com/gofiber/fiber v1.14.6 // indirect
 	github.com/gofiber/utils v0.0.10 // indirect
+	github.com/golang-jwt/jwt/v4 v4.4.2 // indirect
 	github.com/gorilla/mux v1.8.0 // indirect
 	github.com/gorilla/schema v1.1.0 // indirect
 	github.com/klauspost/compress v1.10.7 // indirect
