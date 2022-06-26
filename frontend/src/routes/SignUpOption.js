@@ -14,15 +14,15 @@ const SignUpOption = () => {
       <main className="option-wrapper mt-4">
         <BackButton />
         <Row>
-          <h2 className="option-heading">Pilih Akun</h2>
+          <h4 className="option-heading">Pilih Akun</h4>
         </Row>
         <Row>
           <Link className="option-link" to="/sign-up-option/assistant">
-            <Card className="option-card rounded-pill shadow-sm">
+            <Card className="option-card rounded-pill">
               <Row>
                 <Col sm={3}>
                   <span className="option-icon">
-                    <VscAccount size={70} className="mx-3 my-4" />
+                    <VscAccount size={60} className="mx-4 my-4" />
                   </span>
                 </Col>
                 <Col sm={9} className="option-content">
@@ -38,11 +38,11 @@ const SignUpOption = () => {
         <br></br>
         <Row>
           <Link className="option-link" to="/sign-up-option/student">
-            <Card className="option-card rounded-pill shadow-sm">
+            <Card className="option-card rounded-pill">
               <Row>
                 <Col sm={3}>
                   <span className="option-icon">
-                    <FaChalkboardTeacher size={70} className="mx-3 my-4" />
+                    <FaChalkboardTeacher size={60} className="mx-4 my-4" />
                   </span>
                 </Col>
                 <Col sm={9} className="option-content">

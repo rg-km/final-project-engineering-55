@@ -18,7 +18,7 @@
 }
 .option-card {
   width: 25rem;
-  height: 8rem;
+  height: 7rem;
 }
 .option-card:hover {
   border: 2px solid #a0a0a0;
@@ -29,7 +29,7 @@
   justify-items: center;
 }
 .option-title {
-  font-size: x-large;
+  font-size: 21px;
   margin-top: auto;
   margin-bottom: auto;
 }
