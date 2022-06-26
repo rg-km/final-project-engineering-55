@@ -26,7 +26,7 @@ const PATHS = [
 
 const AssistantNavbar = () => {
     return (
-        <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar bg="dark" variant="dark" expand="lg">
       <Container xs={4} md={4}>
         <Navbar.Brand style={{ fontSize: "20px", fontWeight: 600 }}>
           VLab
@@ -41,6 +41,7 @@ const AssistantNavbar = () => {
               fontSize: "20px",
             }}
             navbarScroll
+            >
             {PATHS.map((path) => (
               <NavLink
                 key={path.to}

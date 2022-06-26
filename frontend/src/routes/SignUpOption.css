@@ -30,10 +30,12 @@
 }
 .option-title {
   font-size: 21px;
+  font-weight: 500;
   margin-top: auto;
   margin-bottom: auto;
 }
 .option-body {
+  font-weight: 400;
   margin-top: -10px;
   margin-bottom: auto;
   color: #747373;

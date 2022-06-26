@@ -19,13 +19,13 @@ const LogInOption = () => {
               style={{ marginLeft: "3%" }}
             />
           </Col>
-          <Col xs={10} md={4} style={{ marginRight: "7%" }}>
+          <Col xs={10} md={4} style={{ marginRight: "12%" }}>
             <h4 className="mt-5 mb-3">
               <center>Masuk Sebagai</center>
             </h4>
-            <Card className="mx-3">
+            <Card className="mx-3 shadow-sm">
               <Card.Header>
-                <Nav fill variant="pills">
+                <Nav fill variant="pills" className="px-3 py-1">
                   <Nav.Item>
                     <Nav.Link href="#" as={Link} to="/login/assistant">
                       Asisten

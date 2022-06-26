@@ -12,8 +12,7 @@ const NavLogo = () => {
             <span
               style={{
                 fontWeight: "bold",
-                fontSize: "30px",
-
+                fontSize: "40px",
                 color: "black",
               }}
             >
@@ -23,8 +22,8 @@ const NavLogo = () => {
 
           <Image
             src={Logo}
-            width="50"
-            height="50"
+            width="60"
+            height="60"
             className="d-inline-block align-top"
             alt="VLab Logo"
           />

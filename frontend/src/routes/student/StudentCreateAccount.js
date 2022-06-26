@@ -46,7 +46,7 @@ const StudentCreateAccount = () => {
   useEffect(() => {
     if (password !== confirmPassword) {
       setLink("");
-    } else {
+    } else if (password === confirmPassword && username !=="" && email !== "" && password !== ""){
       setLink("/login/student");
     }
   }, [password, confirmPassword]);
@@ -67,8 +67,8 @@ const StudentCreateAccount = () => {
             />
           </Col>
         </Col>
-        <Col xl={5} md={4} className="mt-4" style={{ marginRight: "3%" }}>
-          <Card className="my-2 px-4 mx-5 py-3 shadow">
+        <Col xl={5} md={4} className="mt-4" style={{ marginRight: "8%" }}>
+          <Card className="my-2 px-4 mx-5 py-3 shadow-sm">
             <h5 className="mb-4 text-center">Lengkapi Profil Anda</h5>
             <Alert variant="danger" show={show} onClose={() => setShow(false)} dismissible>
               <p>

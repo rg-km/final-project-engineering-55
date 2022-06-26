@@ -39,6 +39,8 @@ const StudentLogin = () => {
   useEffect(() => {
     if (email !== getEmail || password !== getPassword) {
       setLink("");
+    } else if (email === "" && password === ""){
+      setLink("");
     } else if (email === getEmail && password === getPassword) {
       setLink("/student/main/home");
     }
