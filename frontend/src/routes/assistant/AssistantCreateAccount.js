@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Card,
   Col,
@@ -7,11 +7,49 @@ import {
   Button,
   FloatingLabel,
   Container,
+  Alert,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import NavLogo from "../../components/NavLogo";
 
 const AssistantCreateAccount = () => {
+  const [ username, setUsername ] = useState("");
+  const [ email, setEmail ] = useState("");
+  const [ password, setPassword ] = useState("");
+  const [ confirmPassword, setConfirmPassword ] = useState("");
+
+  const [ link, setLink ] = useState("");
+  const [ show, setShow ] = useState(false);
+
+  const handleUsername = (event) => {
+    setUsername(event.target.value);
+  }
+
+  const handleEmail = (event) => {
+    setEmail(event.target.value);
+  }
+
+  const handlePassword = (event) => {
+    setPassword(event.target.value);
+  }
+
+  const handleConfirmPassword = (event) => {
+    setConfirmPassword(event.target.value);
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setShow(true)
+  };
+
+  useEffect(() => {
+    if (password !== confirmPassword) {
+      setLink("");
+    } else {
+      setLink("/login/assistant");
+    }
+  }, [password, confirmPassword]);
+
   return (
     <>
     <NavLogo />
@@ -20,6 +58,11 @@ const AssistantCreateAccount = () => {
         <Col xl={6} md={4} className="mt-4">
           <Card className="my-2 px-4 mx-5 py-3 shadow">
             <h5 className="mb-4 text-center">Lengkapi Profil Anda</h5>
+            <Alert variant="danger" show={show} onClose={() => setShow(false)} dismissible>
+              <p>
+                Password and Confirm Password doesn't match
+              </p>
+            </Alert>
             <Form.Group>
               <FloatingLabel
                 controlId="floatingInput"
@@ -31,6 +74,8 @@ const AssistantCreateAccount = () => {
                   className="shadow-sm"
                   placeholder="Username"
                   name="username"
+                  onChange={handleUsername}
+                  required
                 />
               </FloatingLabel>
             </Form.Group>
@@ -44,7 +89,10 @@ const AssistantCreateAccount = () => {
                 type="email"
                 className="shadow-sm"
                 placeholder="Email"
-                name="email" />
+                name="email"
+                onChange={handleEmail}
+                required
+                />
               </FloatingLabel>
             </Form.Group>
             <Form.Group>
@@ -58,6 +106,8 @@ const AssistantCreateAccount = () => {
                   className="shadow-sm"
                   placeholder="Password"
                   name="password"
+                  onChange={handlePassword}
+                  required
                 />
               </FloatingLabel>
             </Form.Group>
@@ -72,12 +122,27 @@ const AssistantCreateAccount = () => {
                   className="shadow-sm"
                   placeholder="Konfirmasi Password"
                   name="confirmPassword"
+                  onChange={handleConfirmPassword}
+                  required
                 />
               </FloatingLabel>
             </Form.Group>
-            <div class="col-md-12 text-center">
-              <Link to="/login/assistant" class="d-grid gap-2" style={{textDecoration: "none"}}>
-                <Button size="lg" variant="outline-dark">Daftar</Button>
+            <div className="col-md-12 text-center">
+              <Link
+                to={link}
+                className="d-grid gap-2"
+                style={{textDecoration: "none"}}>
+                {(password === confirmPassword) ?
+                  <Button
+                    size="lg"
+                    variant="outline-dark"
+                  >Daftar</Button> :
+                  <Button
+                    size="lg"
+                    variant="outline-dark"
+                    onClick={handleSubmit}
+                  >Daftar</Button>
+                }
               </Link>
             </div>
           </Card>

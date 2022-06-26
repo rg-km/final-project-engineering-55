@@ -28,7 +28,7 @@ const StudentNavbar = () => {
             <Navbar.Collapse id="navbarScroll">
               <Nav
                 className="me-auto my-lg-0"
-                style={{ maxHeight: '100px', marginLeft:"100px", fontSize:"28px" }}
+                style={{ maxHeight: '100px', marginLeft:"60px", fontSize:"28px" }}
                 navbarScroll
               >
                 {PATHS.map((path) => (
