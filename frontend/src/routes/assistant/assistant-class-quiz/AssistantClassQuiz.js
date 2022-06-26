@@ -11,10 +11,10 @@ const AssistantClassQuiz = () => {
   const [formModalType, setFormModalType] = useState("Tambah");
   const [kuisId, setKuisId] = useState(0);
 
-  // const onClickAdd = () => {
-  //   setFormModalType("Tambah");
-  //   setShowFormModal(true);
-  // };
+  const onClickAdd = () => {
+    setFormModalType("Tambah");
+    setShowFormModal(true);
+  };
 
   const [kuis, setKuis] = useState([
     {
@@ -49,15 +49,18 @@ const AssistantClassQuiz = () => {
               </Col>
               <Col>
                 <span>
-                <Link to="/assistant/main/classes/quiz/id" style={{textDecoration: 'none'}}>
-                  <Button
-                    className="assistant-class-quiz-button"
-                    variant="outline-dark"
-                    // onClick={onClickAdd}
+                  <Link
+                    to="/assistant/main/classes/quiz/id"
+                    style={{ textDecoration: "none" }}
                   >
-                    + Tambah Kuis
-                  </Button>
-                </Link>
+                    <Button
+                      className="assistant-class-quiz-button"
+                      variant="outline-dark"
+                      onClick={onClickAdd}
+                    >
+                      + Tambah Kuis
+                    </Button>
+                  </Link>
                 </span>
                 <QuizFormModal
                   kuisList={kuis}

@@ -1,6 +1,14 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Container, Row, Col, Card, Form, Button, Navbar } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  Form,
+  Button,
+  Navbar,
+} from "react-bootstrap";
 import BackButton from "../../../components/BackButton";
 
 const StudentAssignments = () => {
@@ -15,100 +23,96 @@ const StudentAssignments = () => {
 
   return (
     <>
-      <Navbar bg="light" className="shadow">
+      <Navbar>
         <Container>
           <BackButton />
-          <span style={{fontWeight:"bold", fontSize:"40px"}}>
-              <center>Judul Tugas</center>
+          <span style={{ fontWeight: "bold", fontSize: "30px" }}>
+            <center>Tugas Pendahuluan 1</center>
           </span>
-          <span style={{fontWeight:"bold", fontSize:"40px"}}>
-              <center></center>
+          <span style={{ fontWeight: "bold", fontSize: "40px" }}>
+            <center></center>
           </span>
-          </Container>
+        </Container>
       </Navbar>
-    <Container
-      style={{
-        paddingLeft: "2.5rem",
-        paddingRight: "2.5rem",
-      }}
-    >
-      <Row>
-        <Col
-          xs={8}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            marginTop: "30px",
-          }}
-        >
-          <Card
+      <Container
+        style={{
+          paddingLeft: "2.5rem",
+          paddingRight: "2.5rem",
+        }}
+      >
+        <Row>
+          <Col
+            xs={8}
             style={{
-              marginBottom: "20px",
-              borderRadius: "10px",
-              padding: "15px",
+              display: "flex",
+              flexDirection: "column",
+              marginTop: "30px",
             }}
-            className="shadow-sm"
           >
-            <Card.Header className="bg-white">
-              <h6 style={{ float: "right", fontSize: "17px" }}>
-                Tenggat: xx/xx/xxxx xx:xx
-              </h6>
-            </Card.Header>
-            <Card.Body>
-              <h6>Detail</h6>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit.
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            marginTop: "30px",
-          }}
-        >
-          <Card
+            <Card
+              style={{
+                marginBottom: "20px",
+                borderRadius: "10px",
+                padding: "15px",
+              }}
+              className="shadow-sm"
+            >
+              <Card.Header className="bg-white">
+                <h6 style={{ float: "right", fontSize: "15px" }}>
+                  Tenggat: 13/06/2022 23:59
+                </h6>
+              </Card.Header>
+              <Card.Body>
+                <h6>Detail</h6>
+                Kerjakan di kertas folio menggunakan bolpen.
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col
             style={{
-              marginBottom: "20px",
-              borderRadius: "10px",
-              padding: "15px",
+              display: "flex",
+              flexDirection: "column",
+              marginTop: "30px",
             }}
-            className="shadow"
           >
-            <Card.Header className="bg-white">
-              <h6 className="text-center" style={{ fontSize: "17px" }}>
-                Kumpulkan Tugas
-              </h6>
-            </Card.Header>
-            <Card.Body>
-              <Form>
-                <Form.Group className="mb-3" controlId="ControlFile">
-                  <Form.Control
-                    type="file"
-                    name="file"
-                    onChange={handleInputChange}
-                    // value={formValues.file ? formValues.file : ""}
-                  />
-                </Form.Group>
-              </Form>
-              <Link
-                to="/student/main/classes/assignments"
-                class="d-grid gap-2"
-                style={{ textDecoration: "none" }}
-              >
-                <Button size="m" variant="outline-dark">
-                  Submit
-                </Button>
-              </Link>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+            <Card
+              style={{
+                marginBottom: "20px",
+                borderRadius: "10px",
+                padding: "15px",
+              }}
+              className="shadow-sm"
+            >
+              <Card.Header className="bg-white">
+                <h6 className="text-center" style={{ fontSize: "17px" }}>
+                  Kumpulkan Tugas
+                </h6>
+              </Card.Header>
+              <Card.Body>
+                <Form>
+                  <Form.Group className="mb-3" controlId="ControlFile">
+                    <Form.Control
+                      type="file"
+                      name="file"
+                      onChange={handleInputChange}
+                      // value={formValues.file ? formValues.file : ""}
+                    />
+                  </Form.Group>
+                </Form>
+                <Link
+                  to="/student/main/classes/assignments"
+                  class="d-grid gap-2"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Button size="m" variant="outline-dark">
+                    Submit
+                  </Button>
+                </Link>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };
