@@ -1,26 +1,37 @@
-import React from 'react'
-import { Container, Navbar } from "react-bootstrap";
+import React from "react";
+import { Container, Navbar, Image } from "react-bootstrap";
 import Logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const NavLogo = () => {
   return (
     <div>
-      <Navbar bg="light" className="shadow">
+      <Navbar>
         <Container>
-          <span style={{fontFamily: "sans-serif", fontWeight: "bold", fontSize:"40px"}}>
-            VLab
-          </span>
-          <img
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <span
+              style={{
+                fontWeight: "bold",
+                fontSize: "30px",
+
+                color: "black",
+              }}
+            >
+              VLab
+            </span>
+          </Link>
+
+          <Image
             src={Logo}
-            width="60"
-            height="60"
+            width="50"
+            height="50"
             className="d-inline-block align-top"
             alt="VLab Logo"
           />
         </Container>
       </Navbar>
     </div>
-  )
-}
+  );
+};
 
-export default NavLogo
+export default NavLogo;
