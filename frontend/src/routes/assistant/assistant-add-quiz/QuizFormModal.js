@@ -39,14 +39,14 @@ const QuizFormModal = (props) => {
 
   return (
     <Card className="my-2 px-4 mx-5 py-3 shadow"
-      style={{position:"fixed", width:"35%", top:"18", right:"20" }}
+      style={{position:"fixed", width:"35%", top: 100, right: 60 }}
     >
-        <h5 className="mb-4 text-center">Buat Pertanyaan</h5>
+        <h5 className="mb-3 text-center">Buat Pertanyaan</h5>
         <Form.Group>
             <FloatingLabel
             controlId="floatingInput"
             label="Question"
-            className="mb-3"
+            className="mb-2"
             >
             <Form.Control
                 as="textarea"
@@ -62,15 +62,14 @@ const QuizFormModal = (props) => {
             <FloatingLabel
             controlId="floatingInput"
             label="Answer 1"
-            className="mb-3"
+            className="mb-2"
             >
             <Form.Control
-                as="textarea"
-                rows={1}
-                name="option1"
-                placeholder="Masukkan jawaban 1"
-                onChange={handleInputChange}
-                value={formValues.option1 ? formValues.option1 : ""}
+              type="input"
+              name="option1"
+              placeholder="Masukkan jawaban 1"
+              onChange={handleInputChange}
+              value={formValues.option1 ? formValues.option1 : ""}
             />
             </FloatingLabel>
         </Form.Group>
@@ -78,11 +77,10 @@ const QuizFormModal = (props) => {
             <FloatingLabel
             controlId="floatingInput"
             label="Answer 2"
-            className="mb-3"
+            className="mb-2"
             >
             <Form.Control
-            as="textarea"
-            rows={1}
+            type="input"
             name="option2"
             placeholder="Masukkan jawaban 2"
             onChange={handleInputChange}
@@ -94,15 +92,14 @@ const QuizFormModal = (props) => {
             <FloatingLabel
             controlId="floatingInput"
             label="Answer 3"
-            className="mb-3"
+            className="mb-2"
             >
             <Form.Control
-                as="textarea"
-                rows={1}
-                name="option3"
-                placeholder="Masukkan jawaban 3"
-                onChange={handleInputChange}
-                value={formValues.option3 ? formValues.option3 : ""}
+              type="input"
+              name="option3"
+              placeholder="Masukkan jawaban 3"
+              onChange={handleInputChange}
+              value={formValues.option3 ? formValues.option3 : ""}
             />
             </FloatingLabel>
         </Form.Group>
@@ -113,17 +110,16 @@ const QuizFormModal = (props) => {
             className="mb-3"
             >
             <Form.Control
-                as="textarea"
-                rows={1}
-                name="option4"
-                placeholder="Masukkan jawaban 4"
-                onChange={handleInputChange}
-                value={formValues.option4 ? formValues.option4 : ""}
+              type="input"
+              name="option4"
+              placeholder="Masukkan jawaban 4"
+              onChange={handleInputChange}
+              value={formValues.option4 ? formValues.option4 : ""}
             />
             </FloatingLabel>
         </Form.Group>
         <div class="col-md-12 text-center">
-            <span class="d-grid gap-2" style={{textDecoration: "none"}}>
+            <span class="d-grid gap-2">
             <Button variant="primary" onClick={handleSubmit}>
                 Simpan
             </Button>

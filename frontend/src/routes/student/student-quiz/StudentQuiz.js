@@ -62,7 +62,7 @@ const StudentQuiz = () => {
     return (
       <>
       <Navbar bg="light" className="shadow">
-        <Container>
+        <Container style={{width: "80%"}}>
           <BackButton />
           <span style={{fontWeight:"bold", fontSize:"40px"}}>
               <center>Kuis</center>
@@ -72,7 +72,7 @@ const StudentQuiz = () => {
           </span>
           </Container>
       </Navbar>
-      <Container >
+      <Container style={{width: "80%"}}>
         <div className="card mb-3 mt-5">
           <div
             className="card-body"

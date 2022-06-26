@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "username": "amin abdillah",
+        "email": "andiabdillah255@gmail.com",
+        "password": "12345"
+    },
+    {
+        "id": 2,
+        "username": "apriani",
+        "email": "aprianihpc2019@gmail.com",
+        "password": "12345"
+    },
+    {
+        "id": 3,
+        "username": "aura adinda",
+        "email": "auraadinda018@gmail.com",
+        "password": "12345"
+    },
+    {
+        "id": 4,
+        "username": "febi nurfajar",
+        "email": "febinurfajar13@gmail.com",
+        "password": "12345"
+    },
+    {
+        "id": 5,
+        "username": "agung rahmatsyah",
+        "email": "Agungrahmatsyah021@gmail.com",
+        "password": "12345"
+    },
+    {
+        "id": 6,
+        "username": "dewi sasika rani",
+        "email": "I200190054@student.ums.ac.id",
+        "password": "12345"
+    }
+]

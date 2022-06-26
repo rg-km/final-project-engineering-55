@@ -23,7 +23,9 @@ const AddQuiz = () => {
 
     return (
         <>
-         <Navbar bg="light" className="shadow">
+         <Navbar
+            style={{position:"fixed", width:"100%", top: 0, right: 0, zIndex: 9999 }}
+            bg="light" className="shadow">
             <Container>
             <BackButton />
             <span style={{fontWeight:"bold", fontSize:"40px"}}>
@@ -39,7 +41,9 @@ const AddQuiz = () => {
                 </Link>
             </Container>
         </Navbar>
-        <Container className="assistant-class-quiz-container">
+        <Container 
+            style={{marginTop: "110px"}}
+            className="assistant-class-quiz-container">
         <Row className="justify-content-center">
             <Col xs={6} className="mx-3">
             <Card className="px-3 py-3 shadow-sm">
