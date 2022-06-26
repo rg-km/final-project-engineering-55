@@ -13,14 +13,14 @@ const QuizListItems = ({
   kuisList,
   setKuisList,
 }) => {
-  // const onClickEdit = () => {
-  //   setFormModalType("Edit");
-  //   setShowFormModal(true);
-  //   setKuisId(id);
-  // };
+  const onClickEdit = () => {
+    setFormModalType("Edit");
+    setShowFormModal(true);
+    setKuisId(id);
+  };
 
   const handleRemoveItem = (id) => {
-    setKuisList(kuisList.filter(item => item.id !== id));
+    setKuisList(kuisList.filter((item) => item.id !== id));
   };
 
   return (
@@ -36,19 +36,16 @@ const QuizListItems = ({
               <h6>{kuisItem.judul}</h6>
             </Col>
             <Col xs={3}>
-              <span className='action-class-button'>
-                <Button
-                  variant="outline-dark"
-                  // onClick={onClickEdit}
-                >
-                <BiEditAlt/> Edit
+              <span className="action-class-button">
+                <Button variant="outline-dark" onClick={onClickEdit}>
+                  <BiEditAlt /> Edit
                 </Button>
                 &nbsp;
                 <Button
                   variant="outline-dark"
                   onClick={handleRemoveItem.bind(this, id)}
                 >
-                  <AiOutlineDelete/> Hapus
+                  <AiOutlineDelete /> Hapus
                 </Button>
               </span>
             </Col>

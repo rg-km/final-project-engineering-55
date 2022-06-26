@@ -19,20 +19,20 @@ const AssistantClassAssignments = () => {
       id: 1,
       judul: "Tugas Pendahuluan 1",
       deskripsi: "Kerjakan di kertas folio menggunakan bolpen.",
-      tenggat: "13/06/2022",
+      tenggat: "13/06/2022 23:59",
     },
     {
       id: 2,
       judul: "Tugas Pendahuluan 2",
       deskripsi: "Peraturan: Kerjakan saja yah.",
-      tenggat: "15/06/2022",
+      tenggat: "15/06/2022 23:59",
     },
     {
       id: 3,
       judul: "Tugas Pendahuluan 3",
       deskripsi:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      tenggat: "24/06/2022",
+      tenggat: "24/06/2022 23:59",
     },
   ]);
 
