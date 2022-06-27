@@ -2,7 +2,7 @@
 
 ## VLab (Virtual Lab)
 
-[ID] **Vlab** adalah sebuah _Learning Management System_ (LMS) yang dikembangkan khusus untuk memfasilitasi proses pembelajaran praktikum virtual atau tanpa tatap muka. Dengan fitur ini, asisten praktikum dapat memberikan bahan ajar yang dapat diakses dan dibagikan oleh siswa dalam bentuk digital kapan saja dan di mana saja.
+[ID] **Vlab** adalah sebuah _Learning Management System_ (LMS) yang dikembangkan khusus untuk memfasilitasi proses pembelajaran praktikum virtual atau tanpa tatap muka. Dengan fitur ini, asisten praktikum dapat memberikan bahan ajar yang dapat diakses dan dibagikan kepada siswa dalam bentuk digital kapan saja dan di mana saja.
 
 ## How to get started
 
