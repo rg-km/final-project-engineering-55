@@ -33,9 +33,9 @@ const StudentClassQuiz = () => {
     <Container className="student-class-quiz-container">
       <Row className="justify-content-center">
         <Col xs={9} className="student-class-quiz-wrapper">
-          <Card className="student-class-quiz-title shadow-sm">
+          <Card className="student-class-quiz-title class-items-header shadow-sm">
             <Row>
-              <Col>
+              <Col className="classes-items">
                 <h3>Kuis</h3>
                 <h5>Front End Web Programming</h5>
               </Col>

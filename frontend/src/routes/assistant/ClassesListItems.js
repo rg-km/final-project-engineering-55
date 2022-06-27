@@ -28,12 +28,16 @@ const ClassesListItems = ({
         <div>
             <Card className='assistant-classes-items shadow-sm'>
                 <ListGroup variant="flush" className='assistant-classes-link'>
-                <Link to="/assistant/main/classes/posts" style={{textDecoration: 'none'}}>
-                <ListGroup.Item>
+                <Link
+                    to="/assistant/main/classes/posts"
+                    style={{textDecoration: 'none'}}>
+                <ListGroup.Item className='classes-background'>
+                    <span className='classes-items'>
                     <h3>{classItem.kelas}</h3>
                     <h5>
                     {classItem.jurusan}
                     </h5>
+                    </span>
                 </ListGroup.Item>
                 </Link>
                 <ListGroup.Item >

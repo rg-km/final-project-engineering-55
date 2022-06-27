@@ -40,9 +40,9 @@ const AssistantClassAssignments = () => {
     <Container className="assistant-class-assignment-container">
       <Row className="justify-content-center">
         <Col xs={9} className="assistant-class-assignment-wrapper">
-          <Card className="assistant-class-assignment-title shadow-sm">
+          <Card className="assistant-class-assignment-title class-items-header shadow-sm">
             <Row>
-              <Col>
+              <Col className="classes-items">
                 <h3>Tugas Kelas</h3>
                 <h5>Front End Web Programming</h5>
               </Col>
@@ -50,7 +50,7 @@ const AssistantClassAssignments = () => {
                 <span>
                   <Button
                     className="assistant-class-assignment-button"
-                    variant="outline-dark"
+                    variant="danger"
                     onClick={onClickAdd}
                   >
                     + Tambah Tugas

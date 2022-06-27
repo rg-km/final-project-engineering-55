@@ -41,9 +41,9 @@ const AssistantClassQuiz = () => {
     <Container className="assistant-class-quiz-container">
       <Row className="justify-content-center">
         <Col xs={9} className="assistant-class-quiz-wrapper">
-          <Card className="assistant-class-quiz-title shadow-sm">
+          <Card className="assistant-class-quiz-title class-items-header shadow-sm">
             <Row>
-              <Col>
+              <Col className="classes-items">
                 <h3>Kuis</h3>
                 <h5>Front End Web Programming</h5>
               </Col>
@@ -55,7 +55,7 @@ const AssistantClassQuiz = () => {
                   >
                     <Button
                       className="assistant-class-quiz-button"
-                      variant="outline-dark"
+                      variant="danger"
                       onClick={onClickAdd}
                     >
                       + Tambah Kuis

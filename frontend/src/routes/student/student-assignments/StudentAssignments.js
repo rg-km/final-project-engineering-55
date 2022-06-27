@@ -22,8 +22,8 @@ const StudentAssignments = () => {
   const { id } = useParams();
 
   return (
-    <>
-      <Navbar>
+    <div>
+      <Navbar className="shadow py-3">
         <Container>
           <BackButton />
           <span style={{ fontWeight: "bold", fontSize: "30px" }}>
@@ -36,6 +36,7 @@ const StudentAssignments = () => {
       </Navbar>
       <Container
         style={{
+          marginTop: "20px",
           paddingLeft: "2.5rem",
           paddingRight: "2.5rem",
         }}
@@ -113,7 +114,7 @@ const StudentAssignments = () => {
           </Col>
         </Row>
       </Container>
-    </>
+    </div>
   );
 };
 

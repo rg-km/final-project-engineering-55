@@ -37,8 +37,8 @@ const AssistantClassPosts = () => {
       <Container className='assistant-class-post-container'>
         <Row>
           <Col xs={9} className="assistant-class-post-wrapper">
-            <Card className='assistant-class-post-title shadow-sm'>
-              <Row>
+            <Card className='assistant-class-post-title class-items-header shadow-sm'>
+              <Row className="classes-items">
                 <h3>Front End</h3>
                 <h5>
                   Web Programming

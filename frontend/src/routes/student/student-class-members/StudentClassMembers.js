@@ -43,9 +43,9 @@ const StudentClassMembers = () => {
     <Container className="student-class-members-container">
       <Row className="justify-content-center">
         <Col xs={9} className="student-class-members-wrapper">
-          <Card className="student-class-members-title shadow-sm">
+          <Card className="student-class-members-title class-items-header shadow-sm">
             <Row>
-              <Col>
+              <Col className="classes-items">
                 <h3>Anggota</h3>
                 <h5>Front End Web Programming</h5>
               </Col>

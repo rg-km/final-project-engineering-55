@@ -22,9 +22,9 @@ const AddQuiz = () => {
     quiz.sort((a,b) => a.id - b.id);
 
     return (
-        <>
+        <div>
          <Navbar
-            style={{position:"fixed", width:"100%", top: 0, right: 0, zIndex: 9999 }}
+            style={{position:"fixed", width:"100%", top: 0, right: 0, zIndex: 9999}}
             bg="light" className="shadow">
             <Container>
             <BackButton />
@@ -109,7 +109,7 @@ const AddQuiz = () => {
             </Col>
         </Row>
         </Container>
-        </>
+        </div>
     );
 };
 

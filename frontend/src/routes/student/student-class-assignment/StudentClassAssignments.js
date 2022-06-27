@@ -30,9 +30,9 @@ const StudentClassAssignments = () => {
     <Container className="student-class-assignment-container">
       <Row className="justify-content-center">
         <Col xs={9} className="student-class-assignment-wrapper">
-          <Card className="student-class-assignment-title shadow-sm">
+          <Card className="student-class-assignment-title class-items-header shadow-sm">
             <Row>
-              <Col>
+              <Col className="classes-items">
                 <h3>Tugas Kelas</h3>
                 <h5>Front End Web Programming</h5>
               </Col>

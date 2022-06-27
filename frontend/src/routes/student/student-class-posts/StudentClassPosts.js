@@ -24,9 +24,9 @@ const StudentClassPosts = () => {
       <Container className="student-class-post-container">
         <Row>
           <Col xs={9} className="student-class-post-wrapper">
-            <Card className="student-class-post-title shadow-sm">
+            <Card className="student-class-post-title class-items-header shadow-sm">
               <Row>
-                <Col>
+                <Col className="classes-items">
                   <h3>Front End</h3>
                   <h5>Web Programming</h5>
                 </Col>

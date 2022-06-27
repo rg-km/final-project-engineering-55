@@ -60,9 +60,9 @@ const AssistantClassMembers = () => {
     <Container className="assistant-class-members-container">
       <Row className="justify-content-center">
         <Col xs={9} className="assistant-class-members-wrapper">
-          <Card className="assistant-class-members-title shadow-sm">
+          <Card className="assistant-class-members-title class-items-header shadow-sm">
             <Row>
-              <Col>
+              <Col className="classes-items">
                 <h3>Anggota</h3>
                 <h5>Front End Web Programming</h5>
               </Col>
@@ -70,7 +70,7 @@ const AssistantClassMembers = () => {
                 <span>
                   <Button
                     className="assistant-members-button"
-                    variant="outline-dark"
+                    variant="danger"
                     onClick={onClickAdd}
                   >
                     + Tambah Anggota

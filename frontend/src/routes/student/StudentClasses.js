@@ -28,11 +28,13 @@ const StudentClasses = () => {
           <Col xs={9} className="student-classes-content">
           {classes.map((item, index) => (
             <Link to="/student/main/classes/posts" style={{textDecoration: 'none'}}>
-              <Card key={index} className='student-classes-card shadow-sm'>
-                <h3>{item.kelas}</h3>
-                <h5>
-                {item.jurusan}
-                </h5>
+              <Card key={index} className='student-classes-card classes-background shadow-sm'>
+                <span className='classes-items'>
+                  <h3>{item.kelas}</h3>
+                  <h5>
+                  {item.jurusan}
+                  </h5>
+                </span>
               </Card>
             </Link>
           ))}
